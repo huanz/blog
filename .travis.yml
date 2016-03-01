@@ -22,16 +22,20 @@ branches:
     - master
 
 before_install:
-  - npm install hexo-cli -g
-
-install:
-  - npm install
-
-before_script:
+  - openssl aes-256-cbc -K $encrypted_d179d3b595b7_key -iv $encrypted_d179d3b595b7_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
+  - eval $(ssh-agent)
+  - ssh-add ~/.ssh/id_rsa
+  - cp .travis/ssh_config ~/.ssh/config
   - git config --global user.name 'huanz'
   - git config --global user.email 'yhz1219@gmail.com'
 
+install:
+  - npm install hexo-cli -g
+  - npm install
+
 script:
+  - hexo clean
   - hexo g
 
 after_success:
