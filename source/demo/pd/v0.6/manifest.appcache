@@ -1,0 +1,29 @@
+CACHE MANIFEST
+#version 1.0
+CACHE:
+    css/main.css
+    js/all.js
+    img/bg0.png
+	img/first1.png
+	img/first2.png
+	img/first3.png
+	img/first4.png
+	img/first5.png
+	img/first6.png
+	img/flower.png
+	img/hand.png
+	img/hand2.png
+	img/s1.png
+	img/s2.png
+	img/sbg.png
+	img/silent.png
+	img/t1.png
+	img/t2.png
+	img/t3.png
+	img/t4.png
+	img/t5.png
+	img/t6.png
+	img/tbg.png
+
+NETWORK:
+    *

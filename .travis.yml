@@ -11,7 +11,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
-- cp .travis/ssh_config ~/.ssh/config
+- cat ~/.ssh/id_rsa
 - git config --global user.name 'huanz'
 - git config --global user.email 'yhz1219@gmail.com'
 install:
@@ -20,7 +20,6 @@ install:
 script:
 - hexo clean
 - hexo g
-after_success:
 - hexo d
 env:
   global:
