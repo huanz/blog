@@ -1,0 +1,27 @@
+# references
+# https://github.com/jkeylu/deploy-hexo-site-by-travis-ci
+# https://github.com/yous/yous.github.io/blob/source/.travis.yml
+
+language: node_js
+branches:
+  only:
+  - master
+before_install:
+- npm install hexo-cli -g
+install:
+- npm i
+before_script:
+- git config --global user.name 'huanz'
+- git config --global user.email 'yhz1219@gmail.com'
+script:
+- hexo g
+after_success:
+- mkdir .deploy
+- cd .deploy
+- git clone --depth 1 --branch master --single-branch $GH_TOKEN . || (git init && git remote add -t master origin $GH_TOKEN)
+- rm -rf ./*
+- cp -r ../public/* .
+- git add -A .
+- git commit -m "site updated via travis-ci at $(date -u +'%Y-%m-%d %H:%M:%S') $TRAVIS_COMMIT"
+- git branch -m master
+- git push -q $GH_TOKEN HEAD:master
