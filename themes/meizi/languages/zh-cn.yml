@@ -1,0 +1,27 @@
+date_format: "MM月DD , YYYY"
+global:
+    home: "首页"
+    tags: "标签"
+    archives: "归档"
+    search: "搜索"
+    about: "关于"
+    link : "友链"
+    links: "友情链接"
+    github: "GitHub"
+    stack_overflow: "Stack Overflow"
+    twitter: "Twitter"
+    facebook: "Facebook"
+    google_plus: "Google Plus"
+    linkedin: "LinkedIn"
+    mail: "邮箱"
+    rss: "RSS"
+    weibo: "微博"
+    weixin: "微信"
+
+pagination:
+    newer_posts: "上一页"
+    older_posts: "下一页"
+
+post:
+    no_title : "无标题"
+    read_more: "阅读全文 »"

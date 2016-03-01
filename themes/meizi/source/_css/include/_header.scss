@@ -1,0 +1,81 @@
+#header{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9;
+	display: none;
+	background-color: $header_back_color;
+	@include max-screen( 768px ){
+		&{
+			transform: translate3D( 0 , 0 , 0);
+			transition: all .2s $curve;
+			display: block;
+		}
+	}
+	body.side &{
+		.btn-bar{
+			&:before{
+				width: 24px;
+				transform : rotate(45deg-90deg);
+				top: 25px;
+			}
+			&:after{
+				width: 24px;
+				transform : rotate(-45deg+90deg);
+				bottom: 24px;
+			}
+			i{
+				opacity: 0;
+			}
+		}
+	}
+	h1{
+		text-align: center;
+		font-size: 16px;
+		a{
+			color: $header_font_color;
+		}
+	}
+	.btn-bar{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		i,&:before,&:after{
+			width: 22px;
+			height: 1px;
+			position: absolute;
+			left: 14px;
+			background-color: $header_btn_color;
+			transition: all .2s $curve .3s;
+		}
+		i{
+			top: 25px;
+			opacity: 1;
+		}
+		&:before{
+			content: '';
+			top: 17px;
+		}
+		&:after{
+			content: '';
+			bottom: 16px;
+		}
+	}
+	a.me,a.me img{
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		overflow: hidden;
+	}
+	a.me{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+}

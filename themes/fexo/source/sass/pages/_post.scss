@@ -1,0 +1,61 @@
+.post-header {
+  padding-top: 20px;
+  margin: 0 auto;
+  &.left {
+    width: $post-width - 40px;
+    border-left: 4px solid #f0f0f0;
+  }
+  &.center {
+    width: 4px;
+    background: #f0f0f0;
+  }
+  .toolbox {
+    margin-left: -18px;
+    background: #fff;
+  }
+}
+.content-post {
+  margin: 50px auto;
+  &.center {
+    .article-header {
+      text-align: center;
+    }
+  }
+  .article-header {
+    margin-bottom: 40px;
+    .post-title {
+      font-size: 32px;
+      margin: 0 0 12px;
+      color:$title-color;
+      font-weight: normal;
+    }
+    .article-meta {
+      font-size: 12px;
+      margin-top: 8px;
+      margin-bottom: 30px;
+      color: #999;
+      a {
+        color: #999;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .content-post {
+    width: $post-width;
+  }
+}
+@media screen and (max-width: 767px) {
+  .content-post {
+    width: 100%;
+    .article-inner,
+    .article-title {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .disqus-comments,
+    .duoshuo-comments {
+      padding: 10px;
+    }
+  }
+}

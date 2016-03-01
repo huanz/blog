@@ -1,0 +1,28 @@
+#main{
+	padding-left: $size_sidebar_normal;
+	background-color: $color_default;
+	-webkit-overflow-scrolling: touch;
+	background-color: $color_default;
+	.wrap{
+		max-width: 980px;
+		margin: 0 auto;
+		word-wrap: break-word;
+    	word-break: break-all;
+	}
+	@include screen( 768px , 1024px ){
+		&{
+			padding-left: $size_sidebar_mini;
+		}
+	}
+	@include max-screen( 769px ){
+		&{
+			width: 100%;
+			padding-left: 0;
+			background-color: $color_grey_grey;
+			min-height: 100%;
+			padding-top: 50px;
+		}
+	}
+}
+
+

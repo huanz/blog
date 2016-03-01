@@ -1,0 +1,31 @@
+html,
+body {
+  font-family: 'Roboto', Verdana, sans-serif;
+  min-height: 100%;
+  background: #fff;
+
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+ul {
+  line-height: 1.8em;
+  padding: 0;
+  list-style: none;
+}
+.text-center {
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}

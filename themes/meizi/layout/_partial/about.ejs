@@ -1,0 +1,23 @@
+<%- partial('include/header') %>
+
+<%- partial('include/sidebar') %>
+
+<%- partial('include/head') %>
+
+<div id="main">
+    <div class="wrap">
+    	<div id="page-about">
+    		<h1><%- __('global.about') %></h1>
+    		<section class="markdown">
+    			<%- page.content %>
+    		</section>
+    		<% if (theme.disqus_shortname) { %>
+                <%- partial('include/disqus') %>
+            <%}else if(theme.duoshuo_shortname){%>
+                <%- partial('include/duoshuo') %>
+            <%}%>
+    	</div>
+    </div>
+</div>
+<%- partial('include/scripts') %>
+<%- partial('include/footer') %>

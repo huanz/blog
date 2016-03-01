@@ -1,0 +1,27 @@
+.content.content-link {
+  .link-list {
+    .link-item {
+      margin-left: -32px;
+      position: relative;
+      padding: 4px 0 4px 12px;
+      a {
+        color: #444;
+        &:hover {
+          color: $site-color;
+          .avatar {
+            opacity: 0.8;
+          }
+        }
+        .avatar,
+        .name {
+          vertical-align: middle;
+        }
+        .avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

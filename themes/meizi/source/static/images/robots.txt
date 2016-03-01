@@ -1,0 +1,3 @@
+Sitemap: http://www.w3cboy.com/sitemap.xml
+User-agent: *
+Allow: /

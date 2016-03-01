@@ -1,0 +1,36 @@
+.content {
+  width: 500px;
+  margin: 40px auto;
+  border-left: 4px solid #f9f9f9;
+}
+.content.content-archive,
+.content.content-about,
+.content.content-link,
+.content.content-category,
+.content.content-tag {
+  .toolbox {
+    margin-bottom: 15px;
+    margin-left: -20px;
+  }
+}
+
+.duoshuo-comment,
+.disqus-comments {
+  margin-top: 40px;
+}
+
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (max-width: 767px) {
+  .content-archive {
+    overflow-x: hidden;
+    width: 100%;
+    margin-top: 30px;
+    padding-right: 10px;
+    padding-left: 12px;
+    .archive-body {
+      border-left: 4px solid #f9f9f9;
+    }
+  }
+}
