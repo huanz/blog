@@ -1,42 +1,27 @@
 # https://docs.travis-ci.com/user/customizing-the-build/
-#
-# Deploy hexo site by travis-ci
-# https://github.com/jkeylu/deploy-hexo-site-by-travis-ci
-# LICENSE: MIT
-#
-# 1. Copy this file to the root of your repository, then rename it to '.travis.yml'
-# 2. Replace 'YOUR NAME' and 'YOUR EMAIL' at line 29
-# 3. Add an Environment Variable 'DEPLOY_REPO'
-#     1. Generate github access token on https://github.com/settings/applications#personal-access-tokens
-#     2. Add an Environment Variable on https://travis-ci.org/{github username}/{repository name}/settings/env_vars
-#         Variable Name: DEPLOY_REPO
-#         Variable Value: https://{githb access token}@github.com/{github username}/{repository name}.git
-#         Example: DEPLOY_REPO=https://6b75cfe9836f56e6d21187622730889874476c23@github.com/jkeylu/test-hexo-on-travis-ci.git
+# https://docs.travis-ci.com/user/encrypting-files/
 
 language: node_js
-
 sudo: false
-
 branches:
   only:
-    - master
-
+  - master
 before_install:
-  - openssl aes-256-cbc -K $encrypted_d179d3b595b7_key -iv $encrypted_d179d3b595b7_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
-  - chmod 600 ~/.ssh/id_rsa
-  - eval $(ssh-agent)
-  - ssh-add ~/.ssh/id_rsa
-  - cp .travis/ssh_config ~/.ssh/config
-  - git config --global user.name 'huanz'
-  - git config --global user.email 'yhz1219@gmail.com'
-
+- openssl aes-256-cbc -k "$super_secret_key" -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+- git config --global user.name 'huanz'
+- git config --global user.email 'yhz1219@gmail.com'
 install:
-  - npm install hexo-cli -g
-  - npm install
-
+- npm install hexo-cli -g
+- npm install
 script:
-  - hexo clean
-  - hexo g
-
+- hexo clean
+- hexo g
 after_success:
-  - hexo d
+- hexo d
+env:
+  global:
+    secure: 3ruCVkjU0s6dLYwaTggKHDihCf5uoQT5umLwaQfQxmsEbY5jMUbW9siNXJwNfhsnWsr4jXjtgV21Jy4Ioyk95TGTSwBSx72VxqbwKVH2z3l2RlEtJ4IojuvuEZLj1p0rqRg0IYG8tT3drp8NR4viEB1tT9gbS+tv8I6tfzZNKjmg5m6hD/gzk5Uekz4oeItGk6EhUp7CgUD+TJWVUso8gZ3MQCZ/3qnlj2fOiDxSUIe2kgHXlv8l/sriM0a+jxwTRmJpQpDN6Xv8U0s4gBY46gJZth37Lr1+7E1SuydKLE/Yq69mWVyg5Jo8dMGCp29obNRe1QsEM/hU1ADvRYQgK/1Ds1mX0qWdLEUkWRNoixEWDkMDADQ1jqnDdIdby0U6YeK0kGY96a6vOzzDwtuHopcnk4tr1th5PG0pwP+1u0GRY1dDLyPBnieSphtGzPeeBjdWGEATyHU5X+QAu1bJa9FsikufxCEY3muLzIs7zgjFvFVTcogGmp4PM6NFkwpdJaUKOFmHNMMowGoITt/K1Fyq9kfYFCBTAPMfm0ZLe2ZqQOAO5G+MQwmrysILBBTuoGVMDa+CVQrKdjgOARWPs/QhPCkauWi+dBdx+S/6RecNC6B9eYQ7vfsHyBGi41sxnLMrDZNiBucbHHtcIa1Pc69AVceA/IoBzekcsmlC3So=
