@@ -9,3 +9,9 @@ Host gitcafe.com
     StrictHostKeyChecking no
     IdentityFile ~/.ssh/id_rsa
     IdentitiesOnly yes
+
+Host git.coding.net
+    User git
+    StrictHostKeyChecking no
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
