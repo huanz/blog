@@ -25,7 +25,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: [demo/*, demo/**/*]
+skip_render: demo/**/*
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -77,5 +77,4 @@ feed:
 deploy:
   type: git
   repo:
-    gitcafe: git@gitcafe.com:huanz/huanz.git,gitcafe-pages
-
+    coding: https://git.coding.net/bukas/bukas.git,master
