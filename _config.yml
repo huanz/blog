@@ -77,4 +77,4 @@ feed:
 deploy:
   type: git
   repo:
-    coding: https://git.coding.net/bukas/bukas.git,master
+    coding: git@git.coding.net:bukas/bukas.git,master
