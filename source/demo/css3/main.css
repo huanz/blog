@@ -1,0 +1,101 @@
+@import url("load1.css");
+@import url("load2.css");
+@import url("load3.css");
+@import url("load4.css");
+@import url("load5.css");
+@import url("load6.css");
+@import url("load7.css");
+@import url("load8.css");
+
+body,div{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+	font-size: 62.5%;
+  	font-family: "Microsoft YaHei","微软雅黑","Hiragino Sans GB","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif,Lucida,Verdana,Serif;
+  	background: #0dcecb;
+  	color: #FFF;
+}
+
+/* colorful words */
+.header{
+	text-align: center;
+}
+.halfStyle {
+    position:relative;
+    display:inline-block;
+    font-size:60px; /* or any font size will work */
+    color: transparent; /* hide the base character */
+    overflow:hidden;
+    white-space: pre; /* to preserve the spaces from collapsing */
+}
+.halfStyle:before { /* creates the left part */
+    display:block;
+    z-index:1;
+    position:absolute;
+    top:0;
+    width: 50%;
+    content: attr(data-content); /* dynamic content for the pseudo element */
+    overflow:hidden;
+    pointer-events: none; /* so the base char is selectable by mouse */
+    color: #f00; /* for demo purposes */
+    text-shadow: 2px -2px 0px #af0; /* for demo purposes */
+}
+.halfStyle:after { /* creates the right part */
+    display:block;
+    direction: rtl; /* very important, will make the width to start from right */
+    position:absolute;
+    z-index:2;
+    top:0;
+    left:50%;
+    width: 50%;
+    content: attr(data-content); /* dynamic content for the pseudo element */
+    overflow:hidden;
+    pointer-events: none; /* so the base char is selectable by mouse */
+    color: #000; /* for demo purposes */
+    text-shadow: 2px 2px 0px #0af; /* for demo purposes */
+}
+
+/* loads */
+.inner {
+	width: 960px;
+	margin: 0 auto;
+}
+.load-container {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 240px;
+  height: 240px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.load-container a:link,
+.load-container a:visited {
+  position: absolute;
+  bottom: 3px;
+  font-size: 1.15em;
+  text-align: center;
+  left: 0;
+  right: 0;
+  text-decoration: none;
+  color: #FFF;
+}
+.load-container a:link:hover,
+.load-container a:visited:hover {
+  text-decoration: underline;
+}
+.loader {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+

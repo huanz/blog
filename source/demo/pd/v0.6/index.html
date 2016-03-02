@@ -1,0 +1,148 @@
+layout: false
+---
+
+<!DOCTYPE html>
+<html lang="en" manifest="manifest.appcache">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,minimal-ui">
+	<title>中华英烈凭吊周</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div id="main" class="page-wrap">
+		<div class="page page0">
+			<div class="first-nav">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/bg0.png">
+				<div id="j-anim0" class="hide first-t first-t1">
+					<img src="http://blog.u.qiniudn.com/uploads/pd/first1.png">
+				</div>
+				<div id="j-anim1" class="hide first-t first-t2">
+					<img src="http://blog.u.qiniudn.com/uploads/pd/first2.png">
+				</div>
+				<div id="j-anim2" class="hide first-t first-t3">
+					<img src="http://blog.u.qiniudn.com/uploads/pd/first3.png">
+				</div>
+				<div id="j-anim3" class="hide first-t first-t4">
+					<img src="http://blog.u.qiniudn.com/uploads/pd/first4.png">
+				</div>
+			</div>
+			<div class="first-answer">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/first5.png">
+			</div>
+			<div class="first-copy">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/first6.png">
+			</div>
+		</div>
+		<div class="page page1">
+			<div id="j-anim4" class="s1">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/s1.png">
+			</div>
+			<div id="j-anim5" class="s2">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/s2.png" >
+			</div>
+			<div id="j-anim6" class="hand">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/hand.png">
+			</div>
+			<a class="back-home" href="javascript:;">&lt;&lt;Home</a>
+			<div class="s-bot">
+				<div class="s-text">
+					武汉市江岸区是一块红色热土，无数革命先烈曾在这里战斗。陈独秀、毛泽东、周恩来、邓小平、瞿秋白、彭述、蔡和森、罗亦农、李立三、刘少奇、林育南、苏兆征、项英、王荷波、许白昊、董必武、秦邦宪、叶剑英、王明、张国焘、李震瀛、陈潭秋、林育南、项英、杨德甫、林祥谦、施洋等老一辈革命先烈在江岸区就地指导过工作。抛头颅洒热血，他们召开革命会议，建立指挥中心，领导工人运动，在江岸儿女心中树立起一座不朽的丰碑！
+				</div>
+				<div id="j-btns" class="s-btn-wrap">
+					<button class="btn"><img class="img" src="http://blog.u.qiniudn.com/uploads/pd/silent.png"><span>默哀</span></button>
+					<button class="btn"><img class="img" src="http://blog.u.qiniudn.com/uploads/pd/flower.png"><span>送花</span></button>
+				</div>
+			</div>
+			<div class="s-bg"><img src="http://blog.u.qiniudn.com/uploads/pd/sbg.png"></div>
+		</div>
+		<div class="page page1">
+			<div id="j-anim11" class="t1">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/t1.png">
+			</div>
+			<div id="j-anim7" class="hide t-circle t2">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/t2.png">
+			</div>
+			<div id="j-anim8" class="hide t-circle t3">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/t3.png">
+			</div>
+			<div id="j-anim9" class="hide t-circle t4">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/t5.png">
+			</div>
+			<div id="j-anim10" class="hide t-circle t5">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/t5.png">
+			</div>
+			<div id="j-hand" class="hide hand hand2">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/hand2.png">
+			</div>
+			<a class="back-home t-back" href="#index">&lt;&lt;Home</a>
+			<div class="t-copy">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/t6.png">
+			</div>
+			<div class="t-bg">
+				<img src="http://blog.u.qiniudn.com/uploads/pd/tbg.png">
+			</div>
+		</div>
+	</div>
+	<script src="js/all.js"></script>
+	<script>
+
+		$(function(){
+			var pageAnims = [Anim0, Anim1, Anim2]; 
+			$('#main').touchSlider({
+				direction: 'v',
+				itemSelector:'.page',
+				onMoveEnd: function(index){
+					pageAnims[index]();
+				}
+			});
+
+			//home
+			var $page = $('#main').find('.page').eq(0);
+			$('#main').find('.back-home').on('click', function(){
+				$page.animate({top: 0}, 250, 'ease-in',function(){
+					$page.siblings().css({
+						top: $('#main').height()
+					})
+				});
+				$('#main').resetSlider();
+			});
+
+			//默哀/送花
+			var flag = 1;
+			$('#j-btns').on('click', '.btn', function(){
+				if(!flag) return;
+				var $this = $(this);
+				$this.find('span').text(Math.random()*1000|0);
+				$this.siblings('.btn').find('span').text(Math.random()*1000|0);
+				flag = 0;
+			});
+
+			function Anim0(){
+				$('#j-anim0').show().animo({animation: "lightSpeedIn",duration: 0.8});
+				$('#j-anim1').show().animo({animation: "lightSpeedIn",duration: 1.0});
+				$('#j-anim2').show().animo({animation: "lightSpeedIn",duration: 1.2});
+				$('#j-anim3').show().animo({animation: "lightSpeedIn",duration: 1.4});
+			}
+
+			function Anim1(){
+				$('#j-anim4').animo({animation: "flash", duration: 2.0});
+				$('#j-anim5').animo( { animation: 'tada', duration: 1.0 } ,function(){
+					$('#j-anim6').animo({animation: "shake", duration: 5.0, iterate: "infinite"});
+				});
+				
+			}
+
+			function Anim2(){
+				$('#j-anim11').animo({animation: "bounceIn"}, function(){
+					$('#j-anim7, #j-anim8, #j-anim9').show().animo({animation: "rollIn"});
+					$('#j-anim10').show().animo({animation: "rollIn"}, function(){
+						$('#j-anim7, #j-anim8, #j-anim9, #j-anim10').animo({animation: "pulse", duration: 2.0, iterate: "infinite"});
+						$('#j-hand').show().animo({animation: "shake", duration: 5.0, iterate: "infinite"});
+					});
+				});
+			}
+		});		
+	</script>
+</body>
+</html>

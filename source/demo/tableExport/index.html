@@ -1,0 +1,75 @@
+layout: false
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>table export demo | w3cboy</title>
+</head>
+<body>
+	<table id="table1">
+		<thead>
+			<tr>
+				<td>标题一</td>
+				<td>标题二</td>
+				<td>标题三</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="http://w3cboy.com" target="_blank">文字</a></td>
+				<td>咨询</td>
+				<td>测试</td>
+			</tr>
+			<tr>
+				<td><a href="http://w3cboy.com" target="_blank">文字</a></td>
+				<td>咨询</td>
+				<td>测试</td>
+			</tr>
+			<tr>
+				<td><a href="http://w3cboy.com" target="_blank">文字</a></td>
+				<td>咨询</td>
+				<td>测试</td>
+			</tr>
+			<tr>
+				<td><a href="http://w3cboy.com" target="_blank">文字</a></td>
+				<td>咨询</td>
+				<td>测试</td>
+			</tr>
+			<tr>
+				<td><a href="http://w3cboy.com" target="_blank">文字</a></td>
+				<td>咨询</td>
+				<td>测试</td>
+			</tr>
+			<tr>
+				<td><a href="http://w3cboy.com" target="_blank">文字</a></td>
+				<td>咨询</td>
+				<td>测试</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="export">
+		<a data-type="json" href="javascript:;">导出json</a>
+		<a data-type="txt" href="javascript:;">导出txt</a>
+		<a data-type="csv" href="javascript:;">导出csv</a>
+		<a data-type="xls" href="javascript:;">导出excel</a>
+		<a data-type="doc" href="javascript:;">导出word</a>
+	</div>
+	<script src="Blob.js"></script>
+	<script src="FileSaver.js"></script>
+	<script src="tableExport.js"></script>
+	<script>
+
+	var $exportLink = document.getElementById('export');
+	$exportLink.addEventListener('click', function(e){
+		e.preventDefault();
+		if(e.target.nodeName === "A"){
+			tableExport('table1', '测试测试', e.target.getAttribute('data-type'));
+		}
+		
+	}, false);
+
+	</script>
+</body>
+</html>
