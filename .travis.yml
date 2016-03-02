@@ -7,7 +7,7 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -k "$super_secret_key" -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_ed639e6aae75_key -iv $encrypted_ed639e6aae75_iv -in .travis/id_rsa.enc -out ~\/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
@@ -22,6 +22,3 @@ script:
 - hexo g
 after_success:
 - hexo d
-env:
-  global:
-    secure: 3ruCVkjU0s6dLYwaTggKHDihCf5uoQT5umLwaQfQxmsEbY5jMUbW9siNXJwNfhsnWsr4jXjtgV21Jy4Ioyk95TGTSwBSx72VxqbwKVH2z3l2RlEtJ4IojuvuEZLj1p0rqRg0IYG8tT3drp8NR4viEB1tT9gbS+tv8I6tfzZNKjmg5m6hD/gzk5Uekz4oeItGk6EhUp7CgUD+TJWVUso8gZ3MQCZ/3qnlj2fOiDxSUIe2kgHXlv8l/sriM0a+jxwTRmJpQpDN6Xv8U0s4gBY46gJZth37Lr1+7E1SuydKLE/Yq69mWVyg5Jo8dMGCp29obNRe1QsEM/hU1ADvRYQgK/1Ds1mX0qWdLEUkWRNoixEWDkMDADQ1jqnDdIdby0U6YeK0kGY96a6vOzzDwtuHopcnk4tr1th5PG0pwP+1u0GRY1dDLyPBnieSphtGzPeeBjdWGEATyHU5X+QAu1bJa9FsikufxCEY3muLzIs7zgjFvFVTcogGmp4PM6NFkwpdJaUKOFmHNMMowGoITt/K1Fyq9kfYFCBTAPMfm0ZLe2ZqQOAO5G+MQwmrysILBBTuoGVMDa+CVQrKdjgOARWPs/QhPCkauWi+dBdx+S/6RecNC6B9eYQ7vfsHyBGi41sxnLMrDZNiBucbHHtcIa1Pc69AVceA/IoBzekcsmlC3So=
