@@ -57,10 +57,6 @@
 	    border: 1px solid #ddd;
 	    line-height: 1.5
 	}
-    pre,
-    code {
-        font-family: "Consolas","Courier New",Courier,mono,serif;
-    }
 	code {
     	font-size: .9em;
     	white-space: normal;
@@ -109,9 +105,12 @@
 	    line-height: 1.1em;
 	    background-color: #f8f8f8;
 	    -webkit-overflow-scrolling: touch;
-	    font-family: "Consolas","Courier New",Courier,mono,serif;
 	}
-
+    .highlight,
+    pre,
+    code {
+        font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    }
 	.highlight table{
 		display: block;
 		overflow-x: auto;
