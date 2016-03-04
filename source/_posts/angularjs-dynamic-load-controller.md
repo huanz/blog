@@ -12,8 +12,7 @@ AngularJS原生并不支持动态加载Controller的方法，但是却提供注�
 我们把实现动态加载Controller方法封装到一个通用的模块里面，并命名这个模块为`ngCommon`。
 
 ```javascript
-(function (angular) {
-    'use strict';
+(function (angular) {'use strict';
     var CommonApp = angular.module('ngCommon');
     ...
 })(angular);
@@ -156,7 +155,7 @@ DemoApp.config(['$routeProvider', '$routeResolverProvider', function ($routeProv
         controllerUrl: './controller/index.js')
     }))
     .otherwise('/index');
-    
+
 /* ./controller/index.js */
 DemoApp.register.controller('IndexController', ['$scope', '$require', function($scope, $require) {
     ...

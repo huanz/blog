@@ -21,17 +21,17 @@ AngularJS提供很多自带的方法，如：`$apply`, `$timeout`, `$digest` 和
 
 ```javascript
 function MyCtrl($scope) {
-    $scope.message = "Hi";
+    $scope.message = 'Hi';
       setTimeout(function () {
-          $scope.message = "Hello!";
+          $scope.message = 'Hello!';
           // AngularJS unaware of update to $scope
       }, 2000);
 }
 function MyCtrl($scope) {
-    $scope.message = "Hello";
+    $scope.message = 'Hello';
       setTimeout(function () {
           $scope.$apply(function () {
-              $scope.message = "Hi";
+              $scope.message = 'Hi';
           });
       }, 2000);
 }
