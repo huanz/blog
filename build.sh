@@ -12,6 +12,6 @@ if [ "$GIT_FILES" != " " ];then
     git add $GIT_FILES
 fi;
 
-git commit -m $GIT_M
+git commit -m "$GIT_M"
 git push
 echo $GIT_M

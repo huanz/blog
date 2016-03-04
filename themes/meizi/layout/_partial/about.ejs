@@ -11,10 +11,10 @@
     		<section class="markdown">
     			<%- page.content %>
     		</section>
-    		<% if (theme.disqus_shortname) { %>
-                <%- partial('include/disqus') %>
-            <%}else if(theme.duoshuo_shortname){%>
+    		<% if (theme.duoshuo_shortname) { %>
                 <%- partial('include/duoshuo') %>
+            <%}else if(theme.disqus_shortname){%>
+                <%- partial('include/disqus') %>
             <%}%>
     	</div>
     </div>
