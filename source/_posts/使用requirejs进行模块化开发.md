@@ -37,50 +37,50 @@ node build.js optimize=true exclude=force,scatter,k,radar,chord,gauge,funnel,map
 `main.js`是程序的入口js文件，然后我们在`main.js`里面进行模块的加载配置：
 
 ```javascript
-	requirejs.config({
-		//开发专用，阻止浏览器缓存
-		urlArgs: "v=" + Date.now(),
-		//js文件的目录，相对于引入main.js的那个文件的目录
-		baseUrl: 'js',
-		//对于默认不兼容AMD规范的模块通过shim来配置
-		//deps数组，表明该模块的依赖性，
-		//exports值，表明这个模块外部调用时的名称
-		//下面代码里面包含了如何加载库和插件
-		shim: {
-        	'backbone': {
-           	 	deps: ['underscore', 'jquery'],
-            	exports: 'Backbone'
-        	},
-        	'underscore': {
-            	exports: '_'
-        	},
-        	'backbone.localStorage': {
-      			deps: ['backbone'],
-      			exports: 'Backbone'
-    		},
-			'bootstrap.modal': {
-            	deps: ['jquery'],
-            	exports: 'jQuery.fn.modal'
-        	}
+requirejs.config({
+	//开发专用，阻止浏览器缓存
+	urlArgs: "v=" + Date.now(),
+	//js文件的目录，相对于引入main.js的那个文件的目录
+	baseUrl: 'js',
+	//对于默认不兼容AMD规范的模块通过shim来配置
+	//deps数组，表明该模块的依赖性，
+	//exports值，表明这个模块外部调用时的名称
+	//下面代码里面包含了如何加载库和插件
+	shim: {
+    	'backbone': {
+       	 	deps: ['underscore', 'jquery'],
+        	exports: 'Backbone'
+    	},
+    	'underscore': {
+        	exports: '_'
+    	},
+    	'backbone.localStorage': {
+  			deps: ['backbone'],
+  			exports: 'Backbone'
 		},
-		//模块的加载路径（不要加.js后缀，因为默认就是加载js，加了会报错）
-		//路径是相对于上面的baseUrl
-		paths: {
-			jquery: 'lib/jquery/jquery-1.11.1.min',
-			underscore: 'lib/underscore/underscore-min',
-			...
-			text: 'lib/requirejs/plugins/text',
-			echarts:'lib/echarts/echarts',
-        	'echarts/chart/bar' : 'lib/echarts/echarts',
-			config: 'modules/common/config'
-		}	
-	});
+		'bootstrap.modal': {
+        	deps: ['jquery'],
+        	exports: 'jQuery.fn.modal'
+    	}
+	},
+	//模块的加载路径（不要加.js后缀，因为默认就是加载js，加了会报错）
+	//路径是相对于上面的baseUrl
+	paths: {
+		jquery: 'lib/jquery/jquery-1.11.1.min',
+		underscore: 'lib/underscore/underscore-min',
+		...
+		text: 'lib/requirejs/plugins/text',
+		echarts:'lib/echarts/echarts',
+    	'echarts/chart/bar' : 'lib/echarts/echarts',
+		config: 'modules/common/config'
+	}	
+});
 
-	//下面开始加载执行
-	require(['backbone', 'modules/app'], function (Backbone, AppRouter) {
-		new AppRouter();
-    	Backbone.history.start();
-	});
+//下面开始加载执行
+require(['backbone', 'modules/app'], function (Backbone, AppRouter) {
+	new AppRouter();
+	Backbone.history.start();
+});
 ```
 
 
@@ -89,63 +89,63 @@ node build.js optimize=true exclude=force,scatter,k,radar,chord,gauge,funnel,map
 `requirejs`定义一个模块相当简单，下面是一个简单的例子:
 
 ```javascript
-    define(['backbone'], function(Backbone){
-		var AppRouter = Backbone.Router.extend({
-			...
-		});
-
-		//导出对象
-		return AppRouter;
+define(['backbone'], function(Backbone){
+	var AppRouter = Backbone.Router.extend({
+		...
 	});
+
+	//导出对象
+	return AppRouter;
+});
 ```
 
 我们也可以动态加载模块：
 
 ```javascript
-	define(['backbone'], function(Backbone){
-		var AppRouter = Backbone.Router.extend({
-			...
-			index： function(){
-				require(['echarts', 'echarts/chart/bar'], function(ec){
-					...
-				});
-			}
-		});
-
-		//导出对象
-		return AppRouter;
+define(['backbone'], function(Backbone){
+	var AppRouter = Backbone.Router.extend({
+		...
+		index： function(){
+			require(['echarts', 'echarts/chart/bar'], function(ec){
+				...
+			});
+		}
 	});
+
+	//导出对象
+	return AppRouter;
+});
 ```
 
 如果你已经用习惯了`seajs`的模块加载方法的话，你也可以像`seajs`里面那样去加载模块：
 
 ```javascript
-    define(function (require) {
-    	var $ = require('jquery');
+define(function (require) {
+	var $ = require('jquery');
 
-    	return function () {
-    	    ...
-    	};
-	});
+	return function () {
+	    ...
+	};
+});
 ```
 
 或者`CommonJS`的方式也ok:
 	
 ```javascript
-	define(function(require, exports, module) {
-		...
-	});
+define(function(require, exports, module) {
+	...
+});
 ```
 
 `requirejs`提供一个加载文本的插件`text.js`，细心的话你可能已经看到我在`requirejs.config`里面已经配置了，使用也很简单：
 
 ```javascript
-    // 注意这里自定义模块的加载路径
-	// 可以写相对路径，那就是相对于当前js文件的路径
-	// 也可以写绝对路径，就是相对于baseUrl的路径
-	define(['backbone','text!../tmpl/index.html'], function(Backbone, html){
-		
-	});
+// 注意这里自定义模块的加载路径
+// 可以写相对路径，那就是相对于当前js文件的路径
+// 也可以写绝对路径，就是相对于baseUrl的路径
+define(['backbone','text!../tmpl/index.html'], function(Backbone, html){
+	
+});
 ```
 
 **requirejs构建工具r.js**
@@ -153,26 +153,26 @@ node build.js optimize=true exclude=force,scatter,k,radar,chord,gauge,funnel,map
 当项目上线的时候，我们可能需要对模块代码进行压缩合并的操作，这时我们就会用到`requirejs`的构建工具`r.js`。首先我们在项目根目录创建一个`build`的文件夹和`dist`的文件夹，分别用来存放模块合并相关配置和合并后的代码的文件目录，在`build`目录里面存放`r.js`，并新建一个压缩合并的配置文件`config.js`,下面是`config.js`的配置示例：
 
 ```javascript
-	//config.js
-	{
-		//requirejs.cofig文件的路径,它会自动读取main.js里面的配置信息
-    	mainConfigFile : "../js/main.js",
-    	baseUrl: '../js',
-    	name: "main",
-		//输出文件的路径和名称
-    	out: "../dist/js/main.js",
-		//默认情况写r.js会把相关的依赖文件拷贝到输出目录里面去
-		//设置为true之后r.js就不会进行这一操作
-    	removeCombined: true,
-		//findNestedDependencies设置为true表示将所有相关的依赖模块也合并进来，默认为false只会对main.js进行压缩合并的操作
-    	findNestedDependencies: true
-	}
-```javascript
+//config.js
+{
+	//requirejs.cofig文件的路径,它会自动读取main.js里面的配置信息
+	mainConfigFile : "../js/main.js",
+	baseUrl: '../js',
+	name: "main",
+	//输出文件的路径和名称
+	out: "../dist/js/main.js",
+	//默认情况写r.js会把相关的依赖文件拷贝到输出目录里面去
+	//设置为true之后r.js就不会进行这一操作
+	removeCombined: true,
+	//findNestedDependencies设置为true表示将所有相关的依赖模块也合并进来，默认为false只会对main.js进行压缩合并的操作
+	findNestedDependencies: true
+}
+```
 
 然后在命令行执行：
 
 ```bash
-	node r.js -o config.js
+node r.js -o config.js
 ```
 
 执行完成之后便会在`dist/js/`目录下面生成一个合并后的`main.js`
@@ -180,23 +180,23 @@ node build.js optimize=true exclude=force,scatter,k,radar,chord,gauge,funnel,map
 你会发现这个`main.js`可能会非常大，而在实际项目中，像通用的一些jquery、backbone等有时候我们可能没有必要把它压缩进来，我们只需要压缩自己写的一些代码，于是我们再次开始配置我们的`config.js`：
 
 ```javascript
-	{
-    	mainConfigFile : "../js/main.js",
-    	baseUrl: "../js",
-    	removeCombined: true,
-    	findNestedDependencies: true,
-    	dir: "../dist/js",
-    	modules: [{
-			name: "main",
-            exclude: [
-                "backbone",
-				"underscore",
-                "jquery",
-                "text",
-				...
-            ]
-        }]
-	}
+{
+	mainConfigFile : "../js/main.js",
+	baseUrl: "../js",
+	removeCombined: true,
+	findNestedDependencies: true,
+	dir: "../dist/js",
+	modules: [{
+		name: "main",
+        exclude: [
+            "backbone",
+			"underscore",
+            "jquery",
+            "text",
+			...
+        ]
+    }]
+}
 ```
 
 再次运行压缩合并命令将会发现在`exclude`数组里面的项不会被合并。
@@ -206,38 +206,38 @@ node build.js optimize=true exclude=force,scatter,k,radar,chord,gauge,funnel,map
 首先我们新建一个js文件，这个js文件啥也不用做，就是为了引用所有通用的库，这样方便我们进行排除，如下：
 
 ```javascript
-	//libs.js
+//libs.js
 	
-	define([
-		"jquery",
-		"underscore",
-    	"backbone",
-    	...
-    	"text"
-	], function() {});
+define([
+	"jquery",
+	"underscore",
+	"backbone",
+	...
+	"text"
+], function() {});
 ```
 
 然后我们的`config.js`变成了这样：
 
 ```javascript
-	{
-    	mainConfigFile : "../js/main.js",
-    	baseUrl: "../js",
-    	removeCombined: true,
-    	findNestedDependencies: true,
-    	dir: "../dist/js",
-    	modules: [
-        	{
-           	 name: "main",
-            	exclude: [
-                	"libs"
-            	]
-        	},
-       		{
-           		name: "libs"
-       	 	}
-    	]
-	}
+{
+	mainConfigFile : "../js/main.js",
+	baseUrl: "../js",
+	removeCombined: true,
+	findNestedDependencies: true,
+	dir: "../dist/js",
+	modules: [
+    	{
+       	 name: "main",
+        	exclude: [
+            	"libs"
+        	]
+    	},
+   		{
+       		name: "libs"
+   	 	}
+	]
+}
 ```
 
 现在，我们的`build`操作终于完美了。
@@ -245,41 +245,41 @@ node build.js optimize=true exclude=force,scatter,k,radar,chord,gauge,funnel,map
 但是，如果我们的js直接通过cdn引用的呢？如果我们直接运行上面的压缩配置，`r.js`将会报错。因此，对于从cdn引入的js，我们作如下配置：
 
 ```javascript
-	requirejs.config({
-		paths: {
-			//如果cdn挂点，通过本地加载jquery
-        	jquery: ['http://cdn.staticfile.org/jquery/1.11.1/jquery.min.js', 'lib/jquery/jquery-1.11.1.min'],
-        	underscore: 'lib/underscore/underscore-min',
-        	...
-        	text: 'lib/requirejs/plugins/text',
-        	echarts:'lib/echarts/echarts',
-        	'echarts/chart/bar' : 'lib/echarts/echarts',
-        	config: 'modules/common/config'
-    	}  
-	});
+requirejs.config({
+	paths: {
+		//如果cdn挂点，通过本地加载jquery
+    	jquery: ['http://cdn.staticfile.org/jquery/1.11.1/jquery.min.js', 'lib/jquery/jquery-1.11.1.min'],
+    	underscore: 'lib/underscore/underscore-min',
+    	...
+    	text: 'lib/requirejs/plugins/text',
+    	echarts:'lib/echarts/echarts',
+    	'echarts/chart/bar' : 'lib/echarts/echarts',
+    	config: 'modules/common/config'
+	}  
+});
 
-	//修改config.js
-	{
-    	mainConfigFile : "../js/main.js",
-    	baseUrl: "../js",
-    	removeCombined: true,
-    	findNestedDependencies: true,
-    	dir: "../dist/js",
-    	modules: [
-        	{
-           	 name: "main",
-            	exclude: [
-                	"libs"
-            	]
-        	},
-       		{
-           		name: "libs"
-       	 	}
-    	],
-    	paths: {
-        	jquery: "empty:"
-    	}
+//修改config.js
+{
+	mainConfigFile : "../js/main.js",
+	baseUrl: "../js",
+	removeCombined: true,
+	findNestedDependencies: true,
+	dir: "../dist/js",
+	modules: [
+    	{
+       	 name: "main",
+        	exclude: [
+            	"libs"
+        	]
+    	},
+   		{
+       		name: "libs"
+   	 	}
+	],
+	paths: {
+    	jquery: "empty:"
 	}
+}
 ```
 
 我们再次运行合并的操作`node r.js -o config.js`会发现此时`r.js`没有把`jquery`合并进来，因为它是通过cdn加载的。
@@ -305,33 +305,33 @@ node build.js optimize=true exclude=force,scatter,k,radar,chord,gauge,funnel,map
 然后在压缩合并的时候进行配置：
 
 ```javascript
-	//config.js
-	{
-		mainConfigFile : "../js/main.js",
-		appDir: "../",
-    	baseUrl: "js",
-    	removeCombined: true,
-    	findNestedDependencies: true,
-    	dir: "../dist",
-		optimizeCss: "standard",
-    	modules: [
-        	{
-           	 name: "main",
-            	exclude: [
-                	"libs"
-            	]
-        	},
-       		{
-           		name: "libs"
-       	 	}
-    	],
-    	paths: {
-        	jquery: "empty:"
-    	}，
-		//匹配到的文件或者目录不会被拷贝到dist目录
-		fileExclusionRegExp: /(^\.|build|dist|sass|config.rb)/,
-		generateSourceMaps: true
-	}
+//config.js
+{
+	mainConfigFile : "../js/main.js",
+	appDir: "../",
+	baseUrl: "js",
+	removeCombined: true,
+	findNestedDependencies: true,
+	dir: "../dist",
+	optimizeCss: "standard",
+	modules: [
+    	{
+       	 name: "main",
+        	exclude: [
+            	"libs"
+        	]
+    	},
+   		{
+       		name: "libs"
+   	 	}
+	],
+	paths: {
+    	jquery: "empty:"
+	}，
+	//匹配到的文件或者目录不会被拷贝到dist目录
+	fileExclusionRegExp: /(^\.|build|dist|sass|config.rb)/,
+	generateSourceMaps: true
+}
 ```
 
 > `appDir`：项目根目录

@@ -19,17 +19,17 @@ Backbone.Collection有一些方法来实现过滤和搜索。其中大多数都�
 例如`where`方法，当调用这个方法的时候会返回具有你指定的属性值的Model数组。
 
 ```javascript
-	var testCollection = new Backbone.Collection([
-		{name: "joy", age: 21},
-		{name: "jack", age: 20},
-		{name: "pater", age: 32},
-		{name: "daivd", age: 22},
-		{name: "gina", age: 21}
-	]);
+var testCollection = new Backbone.Collection([
+	{name: "joy", age: 21},
+	{name: "jack", age: 20},
+	{name: "pater", age: 32},
+	{name: "daivd", age: 22},
+	{name: "gina", age: 21}
+]);
 
-	var results = testCollection.where({
-		age : 21
-	});
+var results = testCollection.where({
+	age : 21
+});
 ```
 
 
@@ -44,39 +44,39 @@ Backbone.Collection有一些方法来实现过滤和搜索。其中大多数都�
 你可能会说，这很容易啊，来看看下面的操作：
 
 ```javascript
-	var FilteredView = Backbone.View.extend({
+var FilteredView = Backbone.View.extend({
 
-		events: {
-			"click #run": "runFilter"
-		},
+	events: {
+		"click #run": "runFilter"
+	},
 
-		runFilter: function(e){
-			e.preventDefault();
+	runFilter: function(e){
+		e.preventDefault();
 
-			this.filter = {
-				// ... get the filter info from the DOM
-			};
+		this.filter = {
+			// ... get the filter info from the DOM
+		};
 
-			this.render();
-		},
+		this.render();
+	},
 
-		render: function(){
-			var html = [],
-				template = _.template($("tmpl-demo").html());
+	render: function(){
+		var html = [],
+			template = _.template($("tmpl-demo").html());
 
  
-			var filteredList = this.collection.where(this.filter);
+		var filteredList = this.collection.where(this.filter);
 
-    		_.each(filteredList, function(item){
-      			html.push(template(item.toJSON());
-    		});
+		_.each(filteredList, function(item){
+  			html.push(template(item.toJSON());
+		});
 
     
-    		this.$el.html(html);
+		this.$el.html(html);
 
-    		return this;
-		}  
-	});
+		return this;
+	}  
+});
 ```
 
 
@@ -93,25 +93,25 @@ Backbone.Collection有一些方法来实现过滤和搜索。其中大多数都�
 不过，还是来看看如何实现上面这种方式吧：
 	
 ```javascript
-    var testCollection = Backbone.Collection.extend({
-		customFilter: function(filters){
-    		var results = this.where(filters);
-    		this.reset(results);
-		}
-	});
+var testCollection = Backbone.Collection.extend({
+	customFilter: function(filters){
+		var results = this.where(filters);
+		this.reset(results);
+	}
+});
 	
-	var testCollection = new Backbone.Collection([
-		{name: "joy", age: 21},
-		{name: "jack", age: 20},
-		{name: "pater", age: 32},
-		{name: "daivd", age: 22},
-		{name: "gina", age: 21}
-	]);
+var testCollection = new Backbone.Collection([
+	{name: "joy", age: 21},
+	{name: "jack", age: 20},
+	{name: "pater", age: 32},
+	{name: "daivd", age: 22},
+	{name: "gina", age: 21}
+]);
 
-	// filter the collection
-	testCollection.customFiler({
-		age : 21
-	});
+// filter the collection
+testCollection.customFiler({
+	age : 21
+});
 ```
 
 一旦你通过自定义方法过滤Collection，Collection中便只有两个符合条件的项。这似乎是理想的结果，如果你想使用一个新的过滤器，它将只会在上次的结果中进行进一步的过滤，因为之前的Collection已经被更新了，这在大多数时候并不是我们想要的结果。
@@ -121,11 +121,11 @@ Backbone.Collection有一些方法来实现过滤和搜索。其中大多数都�
 如果你想用Backbone.Collection处理过滤的数组，你必须将数组转变成Backbone.Collection。这会出现两个Collection：原始的Collection和过滤之后的Collection，当你有了有了过滤后的Collection后，你就可以使用 Backbone.View来直接渲染了。
 
 ```javascript
-	var results = testCollection.where({
-		age: 21
-	});
+var results = testCollection.where({
+	age: 21
+});
 
-	var filteredCollection = new Backbone.Collection(results);
+var filteredCollection = new Backbone.Collection(results);
 ```
 
 是的，就是这么简单。很欢乐吧，但还是可以变得更加方便。
@@ -155,25 +155,25 @@ Backbone.Collection有一些方法来实现过滤和搜索。其中大多数都�
 当过滤条件改变的时候，你需要更新Collection，重新渲染。最好的操作方式是只实例化一个过滤后的Collection，当这个Collection改变的时候渲染对应的`filterView`。
 
 ```javascript
-	var FilteredView = Backbone.View.extend({
-		initialize: function(){
-			this.listenTo(this.collection, "reset", this.render, this);
-		} 
-	});
+var FilteredView = Backbone.View.extend({
+	initialize: function(){
+		this.listenTo(this.collection, "reset", this.render, this);
+	} 
+});
 
-	var filteredCollection = new Backbone.Collection();
-	var filteredView = new FilteredView({
-		collection: filteredCollection
-	});
+var filteredCollection = new Backbone.Collection();
+var filteredView = new FilteredView({
+	collection: filteredCollection
+});
 
-	$("#run").click(function(e){
-		var filter = {
-    		// ...  new filters
-		};
-		var results = myCollection.where(filter);
+$("#run").click(function(e){
+	var filter = {
+		// ...  new filters
+	};
+	var results = myCollection.where(filter);
 
-		filteredCollection.reset(results);
-	});
+	filteredCollection.reset(results);
+});
 ```
 
 **Addition**
@@ -183,16 +183,16 @@ Backbone.Collection有一些方法来实现过滤和搜索。其中大多数都�
 underscore的`invoke`方法是个很好用的方法，来看个栗子：
 
 ```javascript
-	var demoCollection = Backbone.Collection.extend({
-        model: demoModel,
-        selected : function() {
-            return this.filter(function(itm) {
-                return itm.get('selected');
-            });
-        }
-    });
+var demoCollection = Backbone.Collection.extend({
+    model: demoModel,
+    selected : function() {
+        return this.filter(function(itm) {
+            return itm.get('selected');
+        });
+    }
+});
 
-	var selected = demoCollection.selected();
+var selected = demoCollection.selected();
 ```
 
 
