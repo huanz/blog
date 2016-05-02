@@ -4,20 +4,18 @@
 
 <%- partial('include/head') %>
 
-<div id="main">
-    <div class="wrap">
-    	<div id="page-about">
-    		<h1><%- __('global.about') %></h1>
-    		<section class="markdown">
-    			<%- page.content %>
-    		</section>
-    		<% if (theme.duoshuo_shortname) { %>
-                <%- partial('include/duoshuo') %>
-            <%}else if(theme.disqus_shortname){%>
-                <%- partial('include/disqus') %>
-            <%}%>
-    	</div>
-    </div>
+<div id="main" class="wrap">
+	<div id="page-about">
+		<h1><%- __('global.about') %></h1>
+		<section class="markdown">
+			<%- page.content %>
+		</section>
+		<% if (theme.duoshuo_shortname) { %>
+			<%- partial('include/duoshuo') %>
+		<%}else if(theme.disqus_shortname){%>
+			<%- partial('include/disqus') %>
+		<%}%>
+	</div>
 </div>
 <%- partial('include/scripts') %>
 <%- partial('include/footer') %>

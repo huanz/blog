@@ -118,12 +118,8 @@
 	a{
 		display: block;
 		transition: color .2s $curve,border .2s $curve;
-		border: 1px solid $color_dark_grey;
 		color: $color_dark_grey;
 		text-decoration: none;
-		padding: 0 15px;
-		border-radius: 4px;
-		text-align: center;
 		&:hover{
 			border-color: $color_light_black;
 			color: $color_dark_black;
@@ -333,7 +329,9 @@
         border-bottom: 1px solid $color_grey_grey;
         position: relative;
         img{
+			display: block;
             max-width: 100%;
+			border: 1px solid $color_article_border;
         }
         a{
             color: $color_dark_black;
@@ -374,6 +372,23 @@
         	}
         }
     }
+	.pagination {
+		width: 100%;
+		padding: 20px 0;
+		line-height: 20px;
+		overflow: hidden;
+		a {
+			color: #1980e6;
+			transition: color .2s $curve;
+			&:hover{
+                color: #0f4d8a;
+				text-decoration: underline;
+            }
+		}
+		.next {
+			float: right;
+		}
+	}
     @include max-screen( 769px ){
 	    &{
 	    	margin: 5px;

@@ -1,0 +1,10 @@
+<% if (post.next || post.prev) { %>
+<div class="pagination">
+    <% if (post.prev) { %>
+        <a href="<%- url_for(post.prev.path) %>" class="prev">«&nbsp;<%= post.prev.title %></a>
+    <% } %>
+    <% if (post.next) { %>
+        <a href="<%- url_for(post.next.path) %>" class="next"><%= post.next.title %>&nbsp;»</a>
+    <% } %>
+</div>
+<% } %>

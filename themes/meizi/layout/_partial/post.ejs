@@ -29,43 +29,42 @@ Date.prototype.format = function(format) {
 }
 %>
 
-<div id="main">
-    <div class="wrap">
-        <div id="page-post">
-        	<article class="markdown">
-				<h1>
-					<% if (post.link) { %>
-                        <%= post.title || '(' + __('post.no_title') + ')' %>
-                    <% } else { %>
-                        <%= post.title || '(' + __('post.no_title') + ')' %>
-                    <% } %>
-				</h1>
-				<p class="note-tags">
-					<%  post.tags.each(function( tag , index ){ %>
-                        <a  href="<%= '/tags/' + tag.name  %>" data-tag="<%= tag.name.toLowerCase() %>">
-                            <code class="notebook"><%= tag.name %></code>
-                        </a>
-                    <% }) %>
-				</p>
-				<div class="content">
-					<%- post.content %>
-				</div>
-                <p> -- <acronym title="End of File">EOF</acronym> -- </p>
-                <p><%- partial('include/bdshare') %></p>
-                <div class="post-info">
-                    <p>本文链接：<a href="<%- post.permalink %>"><%- post.permalink %></a></p>
-                    <p>发表于<i><%- new Date(post.date._d).format("yyyy-MM-dd hh:mm:ss") %></i>，并被添加「<%  post.tags.each(function( tag , index ){ %>
-                            <% if(index!==0){ %>，<%}%>
-                            <a  href="<%= '/tags/' + tag.name  %>" data-tag="<%= tag.name.toLowerCase() %>"><%= tag.name %></a>
-                        <% }) %>」标签，最后修改于<i><%- new Date(post.updated._d).format("yyyy-MM-dd hh:mm:ss") %></i></p>
-                </div>
-			</article>
-            <% if (theme.duoshuo_shortname) { %>
-                <%- partial('include/duoshuo') %>
-            <% }else if (theme.disqus_shortname) { %>
-                <%- partial('include/disqus') %>
-            <% } %>
-        </div>
+<div id="main" class="wrap">
+    <div id="page-post">
+        <article class="markdown">
+            <h1>
+                <% if (post.link) { %>
+                    <%= post.title || '(' + __('post.no_title') + ')' %>
+                <% } else { %>
+                    <%= post.title || '(' + __('post.no_title') + ')' %>
+                <% } %>
+            </h1>
+            <p class="note-tags">
+                <%  post.tags.each(function( tag , index ){ %>
+                    <a  href="<%= '/tags/' + tag.name  %>" data-tag="<%= tag.name.toLowerCase() %>">
+                        <code class="notebook"><%= tag.name %></code>
+                    </a>
+                <% }) %>
+            </p>
+            <div class="content">
+                <%- post.content %>
+            </div>
+            <p> -- <acronym title="End of File">EOF</acronym> -- </p>
+            <p><%- partial('include/bdshare') %></p>
+            <div class="post-info">
+                <p>本文链接：<a href="<%- post.permalink %>"><%- post.permalink %></a></p>
+                <p>发表于<i><%- new Date(post.date._d).format("yyyy-MM-dd hh:mm:ss") %></i>，并被添加「<%  post.tags.each(function( tag , index ){ %>
+                        <% if(index!==0){ %>，<%}%>
+                        <a  href="<%= '/tags/' + tag.name  %>" data-tag="<%= tag.name.toLowerCase() %>"><%= tag.name %></a>
+                    <% }) %>」标签，最后修改于<i><%- new Date(post.updated._d).format("yyyy-MM-dd hh:mm:ss") %></i></p>
+            </div>
+        </article>
+        <%- partial('include/prevnext') %>
+        <% if (theme.duoshuo_shortname) { %>
+            <%- partial('include/duoshuo') %>
+        <% }else if (theme.disqus_shortname) { %>
+            <%- partial('include/disqus') %>
+        <% } %>
     </div>
 </div>
 <%- partial('include/scripts') %>

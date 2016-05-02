@@ -33,7 +33,7 @@
     <div class="wrap">
     	<% if( theme.author.gravatar ){ %>
     		<div class="profile">
-    			<a href="/"><img src="<%= resolveImgURL(theme.image_dir,theme.author.gravatar) %>" alt="<%= theme.author.name %>"></a>
+    			<a href="/" style="background-image: url(<%= resolveImgURL(theme.image_dir,theme.author.gravatar) %>)"></a>
     			<span><%= theme.author.name %></span>
     		</div>
     	<%}%>

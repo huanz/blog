@@ -22,15 +22,16 @@ body.side{
 	.profile{
 		padding-top: 40px;
 		padding-bottom: 10px;
-		a,img{
-			width: $size_gravatar_normal;
-			height: $size_gravatar_normal;
-			border-radius: $size_gravatar_normal;
-			overflow: hidden;
-		}
 		a{
 			display: block;
 			margin: 0 auto;
+			width: $size_gravatar_normal;
+			height: $size_gravatar_normal;
+			border-radius: 50%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			overflow: hidden;
 		}
 		span{
 			display: block;

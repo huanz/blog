@@ -1,7 +1,6 @@
 $font_family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei';
 
 
-
 /*============== default ==============*/
 $color_light_black: #323436;
 $color_dark_black: #222;
@@ -13,6 +12,8 @@ $color_dark_grey: #666;
 
 $color_default: #fff;
 $color_main: #2479CC;
+
+$color_article_border: #ccc;
 /*============== default ==============*/
 
 
@@ -36,7 +37,7 @@ $post_title_color: #323436; //列表页标题颜色
 $size_sidebar_normal: 250px;
 $size_sidebar_mini: 75px;
 
-$size_gravatar_normal: 120px;
+$size_gravatar_normal: 140px;
 $size_gravatar_large: 100px;
 $size_gravatar_mini: 40px;
 
