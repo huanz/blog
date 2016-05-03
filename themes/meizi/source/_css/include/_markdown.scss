@@ -1,6 +1,8 @@
 .markdown{
 	line-height: 1.6;
     color: #2c3f51;
+    word-break: break-all;
+    text-align: justify;
 	p, pre, pre.prettyprint, blockquote {
 	    margin: 0 0 1.1em;
 	}
@@ -105,7 +107,7 @@
     code {
         font: normal 10pt Consolas, Monaco, monospace;;
     }
-    
+
     .highlight {
 	    margin: 1em 0;
 	    line-height: 1.1em;
@@ -170,8 +172,8 @@
         .prompt {
             color: #df5000
         }
-        
-        
+
+
         // new
         .comment,
         .quote,
@@ -227,6 +229,6 @@
         .quote {
             font-style: italic;
         }
-        
+
 	}
 }
