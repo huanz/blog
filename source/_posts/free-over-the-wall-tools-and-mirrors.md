@@ -12,6 +12,10 @@ categories: technology
 
 ## updated 2016-05-02
 
+抱歉，相关方法已暂时隐藏，只限有缘人查看...
+
+<div style="display:none">
+
 ### ios翻墙
 
 ios翻墙一直是个坑啊，之前只能走vpn，或者配代理，ios版的shadowsocks也是个很鸡肋的存在，直到一款神器`surge`出现，才打破了这种局面。
@@ -80,6 +84,7 @@ surge的配置比较麻烦，安装完成后启动点击左上角的图标去到
 - [https://www.iamgg.pw/](https://www.iamgg.pw/)
 - [https://www.onenew.net/](https://www.onenew.net/)
 
+</div>
 
 ---
 
