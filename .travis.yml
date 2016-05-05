@@ -20,5 +20,6 @@ install:
 script:
 - hexo clean
 - hexo g
-- cp source/.gitlab-ci.yml public
+- mkdir .deploy_git
+- cp source/.gitlab-ci.yml .deploy_git
 - hexo d
