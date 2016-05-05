@@ -80,3 +80,4 @@ deploy:
   type: git
   repo:
     coding: git@git.coding.net:bukas/bukas.git,master
+    gitlab: git@gitlab.com:bukas/bukas.gitlab.io.git,master

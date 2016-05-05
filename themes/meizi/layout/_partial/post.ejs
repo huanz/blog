@@ -50,7 +50,9 @@ Date.prototype.format = function(format) {
                 <%- post.content %>
             </div>
             <p> -- <acronym title="End of File">EOF</acronym> -- </p>
+            <% if (theme.bdshare) { %>
             <p><%- partial('include/bdshare') %></p>
+            <% } %>
             <div class="post-info">
                 <p>本文链接：<a href="<%- post.permalink %>"><%- post.permalink %></a></p>
                 <p>发表于<i><%- new Date(post.date._d).format("yyyy-MM-dd hh:mm:ss") %></i>，并被添加「<%  post.tags.each(function( tag , index ){ %>
