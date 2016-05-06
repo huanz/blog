@@ -20,6 +20,10 @@ install:
 script:
 - hexo clean
 - hexo g
-- mkdir .deploy_git
-- cp source/.gitlab-ci.yml .deploy_git
 - hexo d
+after_success:
+- cp source/.gitlab-ci.yml .deploy_git
+- cd .deploy_git
+- git add .gitlab-ci.yml
+- git commit -m 'add build config'
+- git push git@gitlab.com:bukas/bukas.gitlab.io.git master

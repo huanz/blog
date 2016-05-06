@@ -33,7 +33,7 @@ surge的配置比较麻烦，安装完成后启动点击左上角的图标去到
 
 	http://surge.w3cboy.com/CMCC.conf
 
-#### 中国联调用户surge配置
+#### 中国联通用户surge配置
 
 	http://surge.w3cboy.com/ChinaUnicom.conf
 
