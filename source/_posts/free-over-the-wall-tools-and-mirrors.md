@@ -27,17 +27,13 @@ surge的优点主要是：
 
 这里我说下免费安装的方法：同步推。
 
-首先去下载同步助手：[同步助手](http://zs.tongbu.com/)。这货有win版和mac版，用电脑下载你的系统版本的。然后将iphone通过数据线接入到电脑上。打开同步助手在资源站正版商店里面搜索`surge`即可下载安装（别问我为何不直接通过网页http://tui.tongbu.com/安装同步推，我试过这种安装的就是个网页版的，完全没什么鸟用）。
-
-![同步助手](http://blog.u.qiniudn.com/uploads/tbzs.png)
-
 surge的配置比较麻烦，安装完成后启动点击左上角的图标去到`Switch Configuration`页面，然后选择`Download Configuration From URL`即可通过网址下载别人弄好的配置文件。可以搜索一下`surge配置`即可搜到一堆别人的配置。这里附上我配置好的surge配置文件：可翻墙、屏蔽广告。
 
 #### 中国移动用户surge配置
 
 	http://surge.w3cboy.com/CMCC.conf
 
-#### 中国移动用户surge配置
+#### 中国联调用户surge配置
 
 	http://surge.w3cboy.com/ChinaUnicom.conf
 
