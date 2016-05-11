@@ -16,6 +16,8 @@ categories: technology
 
 ios翻墙一直是个坑啊，之前只能走vpn，或者配代理，ios版的shadowsocks也是个很鸡肋的存在，直到一款神器`surge`出现，才打破了这种局面。
 
+![surge](http://a3.mzstatic.com/us/r30/Purple18/v4/a0/a1/4e/a0a14ead-2467-9aa6-f108-50ca6ec1a652/icon175x175.png)
+
 surge的优点主要是：
 
 1. 他能接管全局所有的通信流量。
@@ -23,9 +25,9 @@ surge的优点主要是：
 
 **其实surge的本质是网络调试工具，只不过在天朝的特殊环境下，硬生生变成了一个翻墙工具。**
 
-好东西当然是要钱的啦。去[appstore](https://itunes.apple.com/us/app/surge-web-developer-tool-proxy/id1040100637?mt=8)上看下，这软件售价`$99.99`，真心贵啊。不过作者开发也挺辛苦的，尽量去买正版吧。
+好东西当然是要钱的啦。去[appstore](https://itunes.apple.com/us/app/surge-web-developer-tool-proxy/id1040100637?mt=8)上看下，这软件售价`￥648`，真心贵啊。不过作者开发也挺辛苦的，尽量去买正版吧。
 
-这里我说下免费安装的方法：同步推。
+这里我说下免费安装的方法：[同步推](http://zs.tongbu.com/)。
 
 surge的配置比较麻烦，安装完成后启动点击左上角的图标去到`Switch Configuration`页面，然后选择`Download Configuration From URL`即可通过网址下载别人弄好的配置文件。可以搜索一下`surge配置`即可搜到一堆别人的配置。这里附上我配置好的surge配置文件：可翻墙、屏蔽广告。
 
