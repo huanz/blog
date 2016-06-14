@@ -82,22 +82,24 @@
         }
 
         var title;
-        if( page && page.title ){
+        if (page && page.title) {
         	title = page.title + ' - ' + config.title
-        }else{
+        } else{
         	title = config.title;
         }
     %>
     <% if( tags.length > 0 ){%>
     	<meta name="keyword" content="<%= tags.join(',')%>">
     <%}%>
-    <% if( excerpt ){%>
-    	<meta name="description" content="<%= excerpt%>">
-    <%}%>
+    <% if( excerpt ){ %>
+    	<meta name="description" content="<%= excerpt %>">
+    <% } else { %>
+        <meta name="description" content="<%= config.description %>">
+    <% } %>
     <% if (config.feed){ %>
         <link rel="alternative" href="<%- config.feed.path %>" title="<%= config.title %>" type="application/atom+xml">
     <% } %>
-	<title><%=title%></title>
+	<title><%= title %></title>
 	<%- css('static/css/style.css') %>
 </head>
 <body>
