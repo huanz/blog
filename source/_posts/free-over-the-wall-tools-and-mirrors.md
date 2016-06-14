@@ -85,4 +85,5 @@ surge的配置比较麻烦，安装完成后启动点击左上角的图标去到
 
 ### 可用翻墙工具：
 
+- XX-Net: [https://github.com/XX-net/XX-Net](https://github.com/XX-net/XX-Net)
 - 萤火虫FireFly Proxy: [https://github.com/yinghuocho/firefly-proxy](https://github.com/yinghuocho/firefly-proxy)
