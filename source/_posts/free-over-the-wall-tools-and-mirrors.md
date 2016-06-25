@@ -10,7 +10,7 @@ categories: technology
 
 <!-- more -->
 
-## updated 2016-06-13
+## updated 2016-06-25
 
 ### ios翻墙
 
@@ -54,6 +54,22 @@ surge的配置比较麻烦，安装完成后启动点击左上角的图标去到
 最新推荐一款翻墙利器：[lantern（蓝灯）](https://getlantern.org/)。速度还不错，支持`windows`、`mac`、`android`、`ubuntu`。
 
 蓝灯github下载链接：[蓝灯[Lantern]最新版本下载](https://github.com/getlantern/lantern/releases/tag/latest)
+
+如果github无法打开，也可以使用我提供的下载链接（`2.2.4`）：
+
+- windows: [lantern-installer-beta-2.2.4.exe](http://surge.w3cboy.com/lantern-installer-beta-2.2.4.exe)
+- mac: [lantern-installer-beta-2.2.4.dmg](http://surge.w3cboy.com/lantern-installer-beta-2.2.4.dmg)
+- android: [lantern-installer-beta-2.2.4.apk](http://surge.w3cboy.com/lantern-installer-beta-2.2.4.apk)
+- ubuntu: [32位](http://surge.w3cboy.com/lantern-installer-beta-32-bit-2.2.4.deb) [64位](http://surge.w3cboy.com/lantern-installer-beta-64-bit-2.2.4.deb)
+
+
+### PandaDNS
+
+可以翻墙的DNS。支持：wikipedia,google,facebook,twitter,instagram,soundcloud
+
+首选DNS：`182.254.158.191`
+
+备选DNS: `120.27.30.176`
 
 ### google镜像
 
