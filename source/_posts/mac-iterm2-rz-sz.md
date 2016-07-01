@@ -68,7 +68,7 @@ sudo chmod 777 /usr/local/bin/iterm2-*
 
 Regular Expression | Action | Parameters
 ----|------|----
-\*\*B0100 | Run Silent Coprocess | /usr/local/bin/iterm2-send-zmodem.sh
+rz waiting to receive.\*\*B0100| Run Silent Coprocess | /usr/local/bin/iterm2-send-zmodem.sh
 \*\*B00000000000000 | Run Silent Coprocess | /usr/local/bin/iterm2-recv-zmodem.sh
 
 
