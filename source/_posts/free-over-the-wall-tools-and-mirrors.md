@@ -10,7 +10,7 @@ categories: technology
 
 <!-- more -->
 
-## updated 2016-06-25
+## updated 2016-07-06
 
 ### ios翻墙
 
@@ -55,21 +55,29 @@ surge的配置比较麻烦，安装完成后启动点击左上角的图标去到
 
 蓝灯github下载链接：[蓝灯[Lantern]最新版本下载](https://github.com/getlantern/lantern/releases/tag/latest)
 
-如果github无法打开，也可以使用我提供的下载链接（`2.2.4`）：
+如果github无法打开，也可以使用我提供的下载链接（`2.2.5`）：
 
-- windows: [lantern-installer-beta-2.2.4.exe](http://surge.w3cboy.com/lantern-installer-beta-2.2.4.exe)
-- mac: [lantern-installer-beta-2.2.4.dmg](http://surge.w3cboy.com/lantern-installer-beta-2.2.4.dmg)
-- android: [lantern-installer-beta-2.2.4.apk](http://surge.w3cboy.com/lantern-installer-beta-2.2.4.apk)
-- ubuntu: [32位](http://surge.w3cboy.com/lantern-installer-beta-32-bit-2.2.4.deb) [64位](http://surge.w3cboy.com/lantern-installer-beta-64-bit-2.2.4.deb)
+- windows: [lantern-installer-beta-2.2.5.exe](http://surge.w3cboy.com/lantern-installer-beta-2.2.5.exe)
+- mac: [lantern-installer-beta-2.2.5.dmg](http://surge.w3cboy.com/lantern-installer-beta-2.2.5.dmg)
+- android: [lantern-installer-beta-2.2.5.apk](http://surge.w3cboy.com/lantern-installer-beta-2.2.5.apk)
+- ubuntu: [32位](http://surge.w3cboy.com/lantern-installer-beta-32-bit-2.2.5.deb) [64位](http://surge.w3cboy.com/lantern-installer-beta-64-bit-2.2.5.deb)
 
 
-### PandaDNS
+### 翻墙DNS
+
+#### PandaDNS: [http://dns.pandadns.xyz/](http://dns.pandadns.xyz/)
 
 可以翻墙的DNS。支持：wikipedia,google,facebook,twitter,instagram,soundcloud
 
-首选DNS：`182.254.158.191`
+北方首选DNS：`123.206.49.193`
 
-备选DNS: `120.27.30.176`
+南方首选DNS: `120.27.30.176`
+
+#### Udns: [https://www.udns.info/](https://www.udns.info/)
+
+公共DNS: `115.159.157.26`
+
+学者DNS: `115.159.158.38`
 
 ### google镜像
 
