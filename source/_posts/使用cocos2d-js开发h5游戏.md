@@ -10,7 +10,9 @@ categories: technology
 
 开始之前你可以先用微信扫一扫玩下我们做的游戏：
 
-![](http://blog.u.qiniudn.com/uploads/msjt.png)
+![煤屎军团](http://7xp0ue.dl1.z0.glb.clouddn.com/2016-08-16_1471327305.png)
+
+整个代码已经托管在github：[https://github.com/huanz/msjt](https://github.com/huanz/msjt)
 
 ## 如何学习 ##
 
