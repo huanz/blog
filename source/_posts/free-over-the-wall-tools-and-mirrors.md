@@ -10,7 +10,7 @@ categories: technology
 
 <!-- more -->
 
-## updated 2016-07-06
+## updated 2016-09-15
 
 ### ios翻墙
 
@@ -25,7 +25,7 @@ surge的优点主要是：
 
 **其实surge的本质是网络调试工具，只不过在天朝的特殊环境下，硬生生变成了一个翻墙工具。**
 
-好东西当然是要钱的啦。去[appstore](https://itunes.apple.com/us/app/surge-web-developer-tool-proxy/id1040100637?mt=8)上看下，这软件售价`￥648`，真心贵啊。不过作者开发也挺辛苦的，尽量去买正版吧。
+好东西当然是要钱的啦。去[appstore](https://itunes.apple.com/us/app/surge-web-developer-tool-proxy/id1040100637?mt=8)上看下，这软件售价`￥328`，真心贵啊。不过作者开发也挺辛苦的，尽量去买正版吧。
 
 surge的配置比较麻烦，安装完成后启动点击左上角的图标去到`Switch Configuration`页面，然后选择`Download Configuration From URL`即可通过网址下载别人弄好的配置文件。可以搜索一下`surge配置`即可搜到一堆别人的配置。这里附上我配置好的surge配置文件：可翻墙、屏蔽广告。
 
@@ -69,39 +69,24 @@ surge的配置比较麻烦，安装完成后启动点击左上角的图标去到
 
 可以翻墙的DNS。支持：wikipedia,google,facebook,twitter,instagram,soundcloud
 
-北方首选DNS：`123.206.49.193`
-
-南方首选DNS: `120.27.30.176`
-
-#### Udns: [https://www.udns.info/](https://www.udns.info/)
-
 公共DNS: `115.159.157.26`
 
 学者DNS: `115.159.158.38`
 
+
 ### google镜像
 
-- [http://www.wen.lu/](http://www.wen.lu/)
 - [https://g2.wen.lu/](https://g2.wen.lu/)
 - [http://gc.ihuan.me/](http://gc.ihuan.me/)
 - [http://ggss.cf/](http://ggss.cf/)
 - [http://hao.cytbj.com/](http://hao.cytbj.com/)
 - [http://jgoproxy.tk/](http://jgoproxy.tk/)
-- [http://s.8090st.com/](http://s.8090st.com/)
-- [https://www.wacao.org/](https://www.wacao.org/)
 - [http://www.g363.com/](http://www.g363.com/)
-- [http://g.helloit.info/](http://g.helloit.info/)
 - [https://g.jikewenku.cn/](https://g.jikewenku.cn/)
 - [https://www.guge.xxx/](https://www.guge.xxx/)
 - [https://g.libnull.com/](https://g.libnull.com/)
-- [http://ssdao.cdjltz.com/](http://ssdao.cdjltz.com/)
 - [https://global.gogfw.com/](https://global.gogfw.com/)
-- [https://www.onk6.com/](https://www.onk6.com/)
 - [http://www.hntvchina.com/](http://www.hntvchina.com/)
-- [https://g.zrj766.com/](https://g.zrj766.com/)
-- [https://g.alexyang.me/](https://g.alexyang.me/)
-- [https://ggso.in/](https://ggso.in/)
-- [http://www.bjgong.tk/](http://www.bjgong.tk/)
 - [http://gc.ihuan.me/](http://gc.ihuan.me/)
 
 
@@ -109,5 +94,6 @@ surge的配置比较麻烦，安装完成后启动点击左上角的图标去到
 
 ### 可用翻墙工具：
 
+- fanqiang: [https://github.com/bannedbook/fanqiang/wiki](https://github.com/bannedbook/fanqiang/wiki)
 - XX-Net: [https://github.com/XX-net/XX-Net](https://github.com/XX-net/XX-Net)
 - 萤火虫FireFly Proxy: [https://github.com/yinghuocho/firefly-proxy](https://github.com/yinghuocho/firefly-proxy)
