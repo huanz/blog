@@ -1,4 +1,4 @@
-title: [译]关于HTTP安全头你需要知道的一切
+title: 关于HTTP安全头你需要知道的一切[译]
 date: 2017-01-20 14:56:30
 tags: http
 categories: technology
@@ -130,4 +130,41 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 HTTPS通过加密解决了第一个问题，但它在认证上有一些重大的问题（稍后会有更多说明，如 [Public Key Pinning](#http-public-key-pinning-hpkp)）。HSTS头解决元问题：你如何知道与你对话的人实际上支持加密？
 
-HSTS通过[sslstrip](https://moxie.org/software/sslstrip/)减轻攻击。假设你正在使用一个敌对的网络，一个恶意攻击者控制了WiFi路由。攻击者可以禁用您和您浏览的网站之间的加密。即使你访问的网站只能通过HTTPS，攻击者可以中间人的HTTP流量，使它看起来像网站的作品在未加密的HTTP。不需要SSL证书，只需禁用加密。
+HSTS通过[sslstrip](https://moxie.org/software/sslstrip/)削弱攻击。假设你正在使用一个敌对的网络，一个恶意攻击者控制了WiFi路由。攻击者可以禁用您和您浏览的网站之间的加密。即使你访问的网站只能通过HTTPS，攻击者可以中间人的HTTP流量，使它看起来像网站的作品在未加密的HTTP。不需要SSL证书，只需禁用加密。
+
+回到HSTS。`Strict-Transport-Security`头通过让你的浏览器知道它必须始终让你的网站使用加密来解决这个问题。只要你的浏览器识别到HSTS头，并且该HSTS头没过期，那么它就不允许在未加密的情况下访问到该站点，如果通过HTTPS无法访问它就会报出错误。
+
+### 我应该使用吗？
+
+是的。你的应用只能通过HTTPS访问，对吧？通过普通HTTP浏览将重定向到安全的网站，对吧？(提示：使用 [letsencrypt](https://letsencrypt.org/) 如果你想避开商业认证机构的敲诈。)
+
+HSTS头的一个缺点是它允许一种[巧妙的技术](http://www.radicalresearch.co.uk/lab/hstssupercookies)创建可以指纹你用户的超级Cookies。
+
+作为一个网站的经营者，你可能已经有点追踪你的用户了，但是请尽量使用HSTS的好处，不要为了超级Cookies去使用HSTS。
+
+### 如何使用
+
+有两种选择
+
+- `includeSubDomains` - HSTS 应用到子域名
+- `preload` - 谷歌提供让你的网站在浏览器访问硬编码到HTTPS的[服务](https://hstspreload.org/)。通过这种方式，用户甚至不用访问你的网站：浏览器已经知道了它们应该阻止未加密的连接。从那个名单上去掉比较困难，所以除非你的子域名能够永远支持HTTPS你才打开它。
+
+|     平台     |                    用法                    |
+| :--------: | :--------------------------------------: |
+|  Rails 4   | `config.force_ssl = true`默认不包括子域名，要设置的话：` config.ssl_options = { hsts: { subdomains: true } }` |
+|  Rails 5   |        `config.force_ssl = true`         |
+|   Django   | `SECURE_HSTS_SECONDS = 31536000` `SECURE_HSTS_INCLUDE_SUBDOMAINS = True` |
+| Express.js | 使用 [helmet](https://helmetjs.github.io/docs/hsts/) |
+|     Go     | 使用 [unrolled/secure](https://github.com/unrolled/secure) |
+|   Nginx    | ` add_header Strict-Transport-Security "max-age=31536000; includeSubdomains; ";` |
+|   Apache   | ` Header always set Strict-Transport-Security "max-age=31536000; includeSubdomains;` |
+
+
+
+###  我想了解更多
+
+- [RFC 6797](https://tools.ietf.org/html/rfc6797)
+- [Strict-Transport-Security](https://developer.mozilla.org/zh-CN/docs/Security/HTTP_Strict_Transport_Security)
+
+
+
