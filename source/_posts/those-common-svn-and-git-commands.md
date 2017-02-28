@@ -648,6 +648,15 @@ git checkout master
 ```bash
 git merge --no-ff -m "merge with no-ff" dev
 ```
+
+用一个分支的内容覆盖另一个分支：
+
+```bash
+// 合并dev，冲突时用dev的代码替换master的代码
+git merge -s recursive -X theirs dev
+// 合并dev，冲突时用master的代码替换dev的代码
+git merge -s recursive -X ours dev
+```
 	
 ### Bug分支
 
