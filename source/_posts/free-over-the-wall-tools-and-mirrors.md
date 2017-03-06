@@ -49,6 +49,10 @@ surge的配置比较麻烦，安装完成后启动点击左上角的图标去到
 
 整个项目源代码托管在github：[https://github.com/huanz/surge-hosts](https://github.com/huanz/surge-hosts)，可自动更新，如果你发现你的surge配置无法使用了，你可以去这里看看项目的最后更新时间，删掉你之前的配置，然后通过上面的链接下载最新的配置文件。
 
+#### iOS其它翻墙工具
+
+iOS除了surge之外，最近也出了一些其它的翻墙工具，如：`Shadowrocket`、`Wingy`、`土豆丝（Potatso）`、`Alice`、`Shadowing`等。
+
 ### lantern
 
 最新推荐一款翻墙利器：[lantern（蓝灯）](https://getlantern.org/)。速度还不错，支持`windows`、`mac`、`android`、`ubuntu`。
