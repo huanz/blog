@@ -102,6 +102,17 @@ offline:
   stripPrefix: public
   verbose: true
 
+html_minifier:
+  exclude: 
+  removeComments: true
+  collapseWhitespace: true
+  removeScriptTypeAttributes: true
+  removeStyleLinkTypeAttributes: true
+
+clean_css:
+  exclude: 
+    - '*.min.css'
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
