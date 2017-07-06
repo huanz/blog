@@ -62,6 +62,23 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
+markdown:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+category_generator:
+  per_page: 10
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -73,6 +90,17 @@ feed:
   type: rss2
   path: w3cboy.xml
   limit: 20
+
+sitemap:
+    path: sitemap.xml
+
+# offline config passed to sw-precache.
+offline:
+  maximumFileSizeToCacheInBytes: 10485760
+  staticFileGlobs:
+    - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2,json,xml}
+  stripPrefix: public
+  verbose: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

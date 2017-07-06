@@ -33,7 +33,7 @@
     <div class="wrap">
     	<% if( theme.author.gravatar ){ %>
     		<div class="profile">
-    			<a href="/" style="background-image: url(<%= resolveImgURL(theme.image_dir,theme.author.gravatar) %>)"></a>
+    			<a href="/" style="background-image: url(<%= resolveImgURL(theme.image_dir,theme.author.gravatar) %>)" title="<%= theme.author.name %>" alt="<%= theme.author.name %>"></a>
     			<span><%= theme.author.name %></span>
     		</div>
     	<%}%>
@@ -41,7 +41,7 @@
     		<ul class="buttons">
     			<% for( var item in theme.sidebar[items]){%>
     				<li>
-                        <a <% if( is_remote_url(theme.sidebar[items][item].url) ){%> target="_blank" <%}%> class="<% if (theme.sidebar[items][item].class) { %><%= theme.sidebar[items][item].class %><% } %>" href="<%=theme.sidebar[items][item].url%>">
+                        <a <% if( is_remote_url(theme.sidebar[items][item].url) ){%> target="_blank" rel="noopener" <%}%> class="<% if (theme.sidebar[items][item].class) { %><%= theme.sidebar[items][item].class %><% } %>" href="<%=theme.sidebar[items][item].url%>">
                             <% if(theme.sidebar[items][item].icon) {%>
                                 <i class="iconfont icon-<%=theme.sidebar[items][item].icon%>" title="<%=__(theme.sidebar[items][item].title)%>"></i>
                             <%}%>

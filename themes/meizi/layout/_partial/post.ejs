@@ -62,8 +62,8 @@ Date.prototype.format = function(format) {
             </div>
         </article>
         <%- partial('include/prevnext') %>
-        <% if (theme.duoshuo_shortname) { %>
-            <%- partial('include/duoshuo') %>
+        <% if (theme.gentie) { %>
+            <%- partial('include/gentie') %>
         <% }else if (theme.disqus_shortname) { %>
             <%- partial('include/disqus') %>
         <% } %>

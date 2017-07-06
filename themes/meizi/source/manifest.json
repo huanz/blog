@@ -1,0 +1,36 @@
+{
+    "name": "w3cboy",
+    "short_name": "w3cboy",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#323436",
+    "theme_color": "#323436",
+    "description": "w3cboy，专职前端开发，目前在中国北京。这个博客是我随便记录东西的地方，分享最新的前端开发技术。",
+    "icons": [
+        {
+            "src": "/static/images/android-icon-48x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/android-icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/android-icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/android-icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/android-icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image\/png"
+        }
+    ]
+}

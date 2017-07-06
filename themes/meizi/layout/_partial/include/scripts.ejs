@@ -1,39 +1,40 @@
+<% if (theme.gentie) { %>
 <script>
-<% if (theme.duoshuo_shortname) { %>
-        var duoshuoQuery = {short_name:'<%= theme.duoshuo_shortname %>'};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0]
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
+  var cloudTieConfig = {
+      url: document.location.href, 
+      sourceId: '',
+      productKey: '<%= theme.gentie %>',
+      target: 'cloud-tie-wrapper'
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script> 
 <% } else if (theme.disqus_shortname) { %>
+<script>
+    var disqus_config = function () {
+            this.page.url = '<%= post.permalink %>';
+            this.page.identifier = '<%= post.path %>';
+        };
+    (function() {
 
-         var disqus_config = function () {
-             this.page.url = '<%= post.permalink %>';
-             this.page.identifier = '<%= post.path %>';
-         };
-        (function() {
+        var d = document, s = d.createElement('script');
+        var disqus_shortname = '<%= theme.disqus_shortname %>';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
-            var d = document, s = d.createElement('script');
-            var disqus_shortname = '<%= theme.disqus_shortname %>';
-            s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
 
-            s.setAttribute('data-timestamp', +new Date());
-
-            setTimeout(function(){
-                (d.head || d.body).appendChild(s);
-            },100);
-        })();
+        setTimeout(function(){
+            (d.head || d.body).appendChild(s);
+        },100);
+    })();
+</script>
 <% } %>
 <% if (theme.google_analytics){ %>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', '<%= theme.google_analytics.id %>', '<%= theme.google_analytics.site %>');
   ga('send', 'pageview');
-<% } %>
 </script>
+<% } %>
