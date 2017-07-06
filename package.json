@@ -18,7 +18,7 @@
     "hexo-html-minifier": "0.0.2",
     "hexo-offline": "^0.2.2",
     "hexo-renderer-ejs": "^0.3.0",
-    "hexo-renderer-marked": "^0.3.0",
+    "hexo-renderer-markdown-it": "^3.4.1",
     "hexo-server": "^0.2.1"
   }
 }

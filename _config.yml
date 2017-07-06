@@ -62,15 +62,6 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-markdown:
-  gfm: true
-  pedantic: false
-  sanitize: false
-  tables: true
-  breaks: true
-  smartLists: true
-  smartypants: true
-
 index_generator:
   path: ''
   per_page: 10
@@ -100,7 +91,7 @@ offline:
   staticFileGlobs:
     - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2,json,xml}
   stripPrefix: public
-  verbose: true
+  verbose: false
 
 html_minifier:
   exclude: 
