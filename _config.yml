@@ -100,10 +100,6 @@ html_minifier:
   removeScriptTypeAttributes: true
   removeStyleLinkTypeAttributes: true
 
-clean_css:
-  exclude: 
-    - '*.min.css'
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
