@@ -1,0 +1,91 @@
+# ===========================================
+# Site Information Settings
+# ===========================================
+
+# Site creation time
+since: 2015
+
+# Custom your favicon.ico in `site/source`
+favicon: /image/favicon.ico
+
+# Set feed link (false | default | your feed link)
+# false: disable
+# default: use `atom.xml`, generator for `hexo-generator-feed`
+rss: /w3cboy.xml
+
+# ===========================================
+# Menu Settings
+# ===========================================
+menu:
+  Home: /
+  Archives: /archives/
+  # Tags: /tags
+  # Categories: /categories
+  About: /about
+
+# ===========================================
+# Theme Settings
+# ===========================================
+# theme styling
+# color: Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
+theme:
+  color: Default
+  toc: true
+  fancybox: true
+
+copyright:
+  enable: true
+  # https://creativecommons.org/
+  license: '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
+
+reward:
+  enable: false
+  qrCode:
+    wechat:
+    alipay:
+
+# ===========================================
+# Social links Settings
+# ===========================================
+social:
+  email: yhz1219@gmail.com
+  stack-overflow:
+  twitter:
+  facebook:
+  linkedin:
+  google:
+  github: https://github.com/huanz
+  weibo: http://weibo.com/2335228667/
+  zhihu:
+  douban:
+  pocket:
+  tumblr:
+  instagram:
+
+# ===========================================
+# Third Party Services Settings
+# ===========================================
+
+# Baidu Analytics
+baidu_analytics: e0eb5f977ba33a671c79a3076244fdfd
+# Baidu Verification
+baidu_verification: SWwJlIQz43
+
+# Google Analytics
+google_analytics: 
+  id: UA-49034721-1
+  site: w3cboy.com
+  verification: YbtNWYJmADBsINeWmNtqHnBPDVhVVGyidwhEmDzBtFE
+
+# Disqus
+disqus_shortname:
+
+#Changyan
+changyan:
+  appid:
+  appkey:
+
+# ===========================================
+# Version
+# ===========================================
+version: 2.5.0

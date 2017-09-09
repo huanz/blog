@@ -1,0 +1,22 @@
+/* TEAM */
+    Founder & Developer: bukas
+    Contact: bukas.china [at] gmail.com
+    Weibo: @_bukas
+    Blog: http://w3cboy.com/
+    From: BeiJing, China
+    University: Centrial China Normal University Of Electronic Commerce
+    Degree: Bachelor
+
+/* THANKS */
+    humans.txt Founder: Abel Cabans
+    Site: http://www.humanstxt.org
+
+/* SITE */
+    Last update: 2015/09/11
+    Language: Chinese
+    Doctype: HTML5
+    Standards: HTML5, CSS3
+    Components: JQuery
+    Deployment: Git, NodeJS, GitCafe, Hexo
+    Software: PhantomJS
+    IDE: IntelliJ IDEA, Sublime Text 3, VIM

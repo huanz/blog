@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: w3cboy - 前端开发博客
+title: w3cboy
 subtitle: 
 description: w3cboy，专职前端开发，目前在中国北京。这个博客是我随便记录东西的地方，分享最新的前端开发技术。
 author: bukas
-language: zh
+language: zh-cn
 timezone: Asia/Shanghai
 
 # URL
@@ -70,11 +70,18 @@ index_generator:
 category_generator:
   per_page: 10
 
+archive_generator:
+  per_page: 0
+
+markdown:
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: meizi
-# theme: fexo
+theme: even
 
 # feed
 feed:
@@ -105,5 +112,6 @@ html_minifier:
 deploy:
   type: git
   repo:
-    coding: git@git.coding.net:bukas/bukas.git,master
+    # coding: git@git.coding.net:bukas/bukas.git,master
     gitlab: git@gitlab.com:bukas/bukas.gitlab.io.git,master
+    github: git@github.com:huanz/huanz.github.com.git,master
