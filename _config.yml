@@ -107,6 +107,7 @@ html_minifier:
   removeScriptTypeAttributes: true
   removeStyleLinkTypeAttributes: true
 
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
