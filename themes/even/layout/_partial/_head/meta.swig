@@ -17,7 +17,7 @@
 <meta name="format-detection" content="telphone=no, email=no" />
 <meta name="msapplication-TileColor" content="#f8f5ec">
 
- <meta name="screen-orientation" content="portrait">
+<meta name="screen-orientation" content="portrait">
 <meta name="x5-orientation" content="portrait">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="full-screen" content="yes">
