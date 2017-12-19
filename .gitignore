@@ -7,3 +7,4 @@ public/
 .deploy*/
 .sass-cache/
 debug.log
+package-lock.json

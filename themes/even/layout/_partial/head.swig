@@ -26,8 +26,12 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('lib/fancybox/jquery.fancybox.css') }}" />
 {% endif %}
 
-{# oneapm #}
-<script>
-window.BWEUM||(BWEUM={});BWEUM.info = {"stand":true,"agentType":"browser","agent":"browsercollector.oneapm.com/static/js/bw-send-415.6.31.js","beaconUrl":"browsercollector.oneapm.com/beacon","licenseKey":"bMazi~evJfainUZB","applicationID":9610216};
-</script>
-<script src="//browsercollector.oneapm.com/static/js/bw-loader-415.6.31.js"></script>
+{# Analytics and push #}
+{% if not env.debug %}
+  {% include "../_script/analytics.swig" %}
+  {% include "../_script/push.swig" %}
+{% endif %}
+
+{# LeanCloud Counter #}
+{% include "../_script/counter.swig"%}
+
