@@ -67,14 +67,14 @@ social:
 # ===========================================
 
 # Baidu Analytics
-baidu_analytics: e0eb5f977ba33a671c79a3076244fdfd
+baidu_analytics: b55278bdcb7115441071d19eb18b0d97
 # Baidu Verification
 baidu_verification: SWwJlIQz43
 
 # Google Analytics
 google_analytics: 
   id: UA-49034721-1
-  site: w3cboy.com
+  site: noonme.com
   verification: YbtNWYJmADBsINeWmNtqHnBPDVhVVGyidwhEmDzBtFE
 
 # Disqus
