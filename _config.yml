@@ -113,6 +113,6 @@ html_minifier:
 deploy:
   type: git
   repo:
-    # coding: git@git.coding.net:bukas/bukas.git,master
+    coding: git@git.coding.net:bukas/bukas.git,master
     gitlab: git@gitlab.com:bukas/bukas.gitlab.io.git,master
     github: git@github.com:huanz/huanz.github.com.git,master
