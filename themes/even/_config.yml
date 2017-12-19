@@ -6,7 +6,7 @@
 since: 2015
 
 # Custom your favicon.ico in `site/source`
-favicon: /image/favicon.ico
+favicon: /image/icon/favicon.ico
 
 # Set feed link (false | default | your feed link)
 # false: disable
