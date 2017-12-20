@@ -10,7 +10,7 @@ categories: technology
 
 <!-- more -->
 
-## updated 2016-09-15
+## updated 2017-12-20
 
 ### ios翻墙
 
@@ -59,40 +59,69 @@ iOS除了surge之外，最近也出了一些其它的翻墙工具，如：`Shado
 
 蓝灯github下载链接：[蓝灯[Lantern]最新版本下载](https://github.com/getlantern/lantern/releases/tag/latest)
 
-如果github无法打开，也可以使用我提供的下载链接（`2.2.5`）：
+如果github无法打开，也可以使用我提供的下载链接（`4.4.1`）：
 
-- windows: [lantern-installer-beta-2.2.5.exe](http://surge.w3cboy.com/lantern-installer-beta-2.2.5.exe)
-- mac: [lantern-installer-beta-2.2.5.dmg](http://surge.w3cboy.com/lantern-installer-beta-2.2.5.dmg)
-- android: [lantern-installer-beta-2.2.5.apk](http://surge.w3cboy.com/lantern-installer-beta-2.2.5.apk)
-- ubuntu: [32位](http://surge.w3cboy.com/lantern-installer-beta-32-bit-2.2.5.deb) [64位](http://surge.w3cboy.com/lantern-installer-beta-64-bit-2.2.5.deb)
+链接: [https://pan.baidu.com/s/1hrYlxA0](https://pan.baidu.com/s/1hrYlxA0) 密码: azxy
 
 
 ### 翻墙DNS
 
-#### PandaDNS: [http://dns.pandadns.xyz/](http://dns.pandadns.xyz/)
+#### [https://aixyz.com/](https://aixyz.com/)
 
-可以翻墙的DNS。支持：wikipedia,google,facebook,twitter,instagram,soundcloud
+干净,自由,无劫持
 
-公共DNS: `115.159.157.26`
+南方：`115.159.146.99`
 
-学者DNS: `115.159.158.38`
+北方：`123.206.21.48`
 
+
+#### Freenom World: [http://www.freenom.world/zh/index.html](http://www.freenom.world/zh/index.html)
+
+Freenom World是快速且保护隐私的DNS服务器
+
+```
+80.80.80.80
+80.80.81.81
+```
 
 ### google镜像
 
-- [https://g2.wen.lu/](https://g2.wen.lu/)
-- [http://gc.ihuan.me/](http://gc.ihuan.me/)
-- [http://ggss.cf/](http://ggss.cf/)
-- [http://hao.cytbj.com/](http://hao.cytbj.com/)
-- [http://jgoproxy.tk/](http://jgoproxy.tk/)
-- [http://www.g363.com/](http://www.g363.com/)
-- [https://g.jikewenku.cn/](https://g.jikewenku.cn/)
-- [https://www.guge.xxx/](https://www.guge.xxx/)
-- [https://g.libnull.com/](https://g.libnull.com/)
-- [https://global.gogfw.com/](https://global.gogfw.com/)
-- [http://www.hntvchina.com/](http://www.hntvchina.com/)
-- [http://gc.ihuan.me/](http://gc.ihuan.me/)
+- [http://www.gufenso.cn/](http://www.gufenso.cn/)
+- [http://www.gfsoso.me/](http://www.gfsoso.me/)
+- [https://g.segmentfualt.com/](https://g.segmentfualt.com/)
+- [http://gufenso.coderschool.cn/](http://gufenso.coderschool.cn/)
+- [https://quick.likeso.ml/](https://quick.likeso.ml/)
+- [https://guge.today/](https://guge.today/)
+- [http://www.dirmor.top/](http://www.dirmor.top/)
+- [http://ac.scmor.com/](http://ac.scmor.com/)
+- [https://gg.bdao.top/](https://gg.bdao.top/)
+- [https://hp.myway.com/myway/index.html](https://hp.myway.com/myway/index.html)
+- [https://xue.glgoo.net/](https://xue.glgoo.net/)
+- [https://xues.glgoo.com/](https://xues.glgoo.com/)
+- [hhttps://busca.uol.com.br/](https://busca.uol.com.br/)
+- [http://bird.so/](http://bird.so/)
+- [https://g.nuist.top/scholar](https://g.nuist.top/scholar)
+- [https://g.nuist.top/](https://g.nuist.top/)
+- [https://g.codery.ga/](https://g.codery.ga/)
+- [https://h.ggkai.men/extdomains/scholar.google.com/](https://h.ggkai.men/extdomains/scholar.google.com/)
+- [https://c3.zgdhhjha.com/scholar](https://c3.zgdhhjha.com/scholar)
+- [https://a.glgooo.top/scholar/](https://a.glgooo.top/scholar/)
+- [https://google.uulucky.com/](https://google.uulucky.com/)
+- [https://xs.bban.top/scholar/](https://xs.bban.top/scholar/)
+- [https://ge.sxisa.org/](https://ge.sxisa.org/)
 
+### 在线代理站点
+
+- [https://nl.hideproxy.me/](https://nl.hideproxy.me/)
+- [https://be.unblockit.co/](https://be.unblockit.co/)
+- [https://www.zalmos.com/](https://www.zalmos.com/)
+
+> zalmos 的使用需要配合hosts，在你的 hosts 文件增加如下内容
+
+```
+195.154.46.4 www.zalmos.com
+195.154.46.8 proxy.zalmos.com
+```
 
 ---
 
@@ -100,4 +129,21 @@ iOS除了surge之外，最近也出了一些其它的翻墙工具，如：`Shado
 
 - fanqiang: [https://github.com/bannedbook/fanqiang/wiki](https://github.com/bannedbook/fanqiang/wiki)
 - XX-Net: [https://github.com/XX-net/XX-Net](https://github.com/XX-net/XX-Net)
-- 萤火虫FireFly Proxy: [https://github.com/yinghuocho/firefly-proxy](https://github.com/yinghuocho/firefly-proxy)
+
+### 免费翻墙帐号分享
+
+- [Shadowsocks免费账号分享](https://doub.bid/sszhfx/)
+- [https://get.freess.today/](https://get.freess.today/)
+
+### Shadowscoks翻墙软件下载
+
+- Mac Shadowsocks-X-NG 1.7.0 链接: [https://pan.baidu.com/s/1pKXrjGB](https://pan.baidu.com/s/1pKXrjGB) 密码: 8vee
+- Windows Shadowsocks 4.0.7 链接: [https://pan.baidu.com/s/1pL0xsOb](https://pan.baidu.com/s/1pL0xsOb) 密码: vrj4
+- Android Shadowsocks 4.3.3 链接: [https://pan.baidu.com/s/1sluT7zB](https://pan.baidu.com/s/1sluT7zB) 密码: eb9k
+- iOS surge 2.6.2 链接: [https://pan.baidu.com/s/1gf0DCH1](https://pan.baidu.com/s/1gf0DCH1) 密码: dgfi
+- iOS wingy 1.1.1 链接: [https://pan.baidu.com/s/1cEvcCI](https://pan.baidu.com/s/1cEvcCI) 密码: zw1n
+- iOS shadowsocket 2.1.1 链接: [https://pan.baidu.com/s/1kUJmi03](https://pan.baidu.com/s/1kUJmi03) 密码: c9tm
+
+### 翻墙集合
+
+- [new-pac](https://github.com/Alvin9999/new-pac/wiki)
