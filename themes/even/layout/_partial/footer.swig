@@ -10,6 +10,8 @@
     {{ __('footer.theme') }} - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
+  <span class="division">|</span>
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
 
   <span class="copyright-year">
     {% set current = date(Date.now(), "YYYY") %}
