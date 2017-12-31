@@ -82,12 +82,20 @@ google_analytics: UA-49034721-1
 google_verification: YbtNWYJmADBsINeWmNtqHnBPDVhVVGyidwhEmDzBtFE
 
 # Disqus
-disqus_shortname:
+disqus_shortname: 
 
 #Changyan
 changyan:
-  appid: cytmKRLoU
-  appkey: 8fd348b115c3935719a3ad0865b241c6
+  appid: # cytmKRLoU
+  appkey: # 8fd348b115c3935719a3ad0865b241c6
+
+valine:
+  appid: xoEVsPhgw6N3YPfMBXnq6q1K-gzGzoHsz
+  appkey: WMWiVHdG2AKdDrC6kgUCoBnU
+  notify: false # true/false:mail notify !!!Test,Caution. https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE
+  verify: false # true/false:verify code
+  avatar: retro # avatar style https://github.com/xCss/Valine/wiki/avatar-setting-for-valine
+  placeholder: ^v^~~~来说点啥吧... # comment box placeholder
 
 # ===========================================
 # Version
