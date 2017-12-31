@@ -31,21 +31,21 @@ surge的配置比较麻烦，安装完成后启动点击左上角的图标去到
 
 #### 中国移动用户surge配置
 
-	http://surge.w3cboy.com/CMCC.conf
+	http://surge.noonme.com/CMCC.conf
 
 #### 中国联通用户surge配置
 
-	http://surge.w3cboy.com/ChinaUnicom.conf
+	http://surge.noonme.com/ChinaUnicom.conf
 
 #### 中国电信用户surge配置
 
-	http://surge.w3cboy.com/ChinaNet.conf
+	http://surge.noonme.com/ChinaNet.conf
 
 最后附上翻墙hosts：[hosts](https://raw.githubusercontent.com/huanz/surge-hosts/master/hosts)
 
 使用过程中你可能有时用`wifi`，有时用蜂窝，网络类型可能会发生变化，所以建议你把三个配置都下载下来，根据不同网络切换使用不同配置。
 
-如果你不知道自己的网络类型，可以打开这里：[http://surge.w3cboy.com/](http://surge.w3cboy.com/)，会显示你的网络类型，同时相关的配置文件也罗列出来了方便拷贝使用。
+如果你不知道自己的网络类型，可以打开这里：[http://surge.noonme.com/](http://surge.noonme.com/)，会显示你的网络类型，同时相关的配置文件也罗列出来了方便拷贝使用。
 
 整个项目源代码托管在github：[https://github.com/huanz/surge-hosts](https://github.com/huanz/surge-hosts)，可自动更新，如果你发现你的surge配置无法使用了，你可以去这里看看项目的最后更新时间，删掉你之前的配置，然后通过上面的链接下载最新的配置文件。
 
