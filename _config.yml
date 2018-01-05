@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: fer
+title: 前端博客
 subtitle: 
 description: 专职前端开发，目前在中国北京。这个博客是我随便记录东西的地方，分享最新的前端开发技术。
 author: bukas
@@ -12,7 +12,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://noonme.com
+url: https://www.noonme.com
 root: /
 permalink: post/:year/:month/:title/
 permalink_defaults:
@@ -86,7 +86,7 @@ theme: even
 # feed
 feed:
   type: rss2
-  path: w3cboy.xml
+  path: rss.xml
   limit: 20
 
 sitemap:
