@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #019fe8 url(https://zos.alipayobjects.com/rmsportal/eFatlrQCyUQVBoalzBPS.png) no-repeat top;
+            background-size: 100%;
+            text-align: center;
+            font-size: .16rem;
+            line-height: 1.2;
+            color: #333;
+        }
+
+        .action {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 8rem;
+            margin: auto;
+            width: 70%;
+        }
+
+        .action a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            color: #1b99dc;
+            background: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 300px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="action">
+        <a href="javascript:void(0)" onclick="redPackage()">抢红包</a>
+    </div>
+    <script>
+        function getMyObjFromUrl(obj) {
+
+            var tempObj = {};
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                tempObj[sParameterName[0]] = sParameterName[1];
+            }
+            for (var i in obj) {
+                obj[i] = tempObj[i] ? tempObj[i] : obj[i];
+            }
+
+            return obj;
+        }
+
+        function getUrlParameter(sParam) {
+
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] === sParam) {
+                    return decodeURI(sParameterName[1]);
+                }
+            }
+
+        }
+        
+
+        var value = getUrlParameter('who') || 'knight';
+        var config = {
+            "bukas": "https://qr.alipay.com/c1x08278jpne2ys6vkezu27",
+            "knight": "https://qr.alipay.com/c1x00331mvtyref9qwohsef",
+            "jixing": "https://qr.alipay.com/c1x08713wntahke7cqyak29",
+            "lyn":"https://qr.alipay.com/c1x01399jyq0megdzumct2a",
+            "licc":"https://qr.alipay.com/c1x07918j6qfxheynbqxh83",
+            "mazz":"https://qr.alipay.com/c1x05989cjof35btzwlaw73",
+            "zhaohy":"https://qr.alipay.com/c1x04592lhdmq4djihjpn73"
+        };
+        var url = config[value];
+
+        function is_weixin() {
+            if (/MicroMessenger/i.test(navigator.userAgent)) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function is_android() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/(Android|SymbianOS)/i)) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function is_ios() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (/iphone|ipad|ipod/.test(ua)) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function android_auto_jump() {
+            WeixinJSBridge.invoke("jumpToInstallUrl", {}, function (e) {});
+            window.close();
+            WeixinJSBridge.call("closeWindow")
+        }
+
+        function ios_auto_jump() {
+            if (url != "") {
+                location.href = url;
+            } else {
+                window.close();
+                WeixinJSBridge.call("closeWindow")
+            }
+        }
+
+        function onAutoinit() {
+            if (is_android()) {
+                android_auto_jump();
+                return false
+            }
+            if (is_ios()) {
+                ios_auto_jump();
+                return false
+            }
+        }
+
+        function redPackage() {
+            if (is_weixin()) {
+                if (typeof WeixinJSBridge == "undefined") {
+                    if (document.addEventListener) {
+                        document.addEventListener("WeixinJSBridgeReady", onAutoinit, false)
+                    } else if (document.attachEvent) {
+                        document.attachEvent("WeixinJSBridgeReady", onAutoinit);
+                        document.attachEvent("onWeixinJSBridgeReady", onAutoinit)
+                    }
+                } else {
+                    onAutoinit()
+                }
+            } else {
+                if (url != "") {
+                    location.href = url
+                } else {
+                    window.close()
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
