@@ -32,20 +32,35 @@
             background: #fff;
             font-size: 20px;
             font-weight: 700;
-            margin-top:400px;
+            margin-top: 300px;
             text-decoration: none;
             border-radius: 5px;
         }
     </style>
 </head>
 
-<body>
+<body onclick="redPackage()">
     <div class="action">
-        <a href="javascript:void(0)" onclick="redPackage()">抢红包</a>
+        <a href="javascript:redPackage();">抢红包</a>
     </div>
     <script>
-        var _0 = "https://qr.alipay.com/c1x08278jpne2ys6vkezu27";
-        var _1 = "https://qr.alipay.com/c1x08278jpne2ys6vkezu27";
+        function getMyObjFromUrl(obj) {
+
+            var tempObj = {};
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                tempObj[sParameterName[0]] = sParameterName[1];
+            }
+            for (var i in obj) {
+                obj[i] = tempObj[i] ? tempObj[i] : obj[i];
+            }
+
+            return obj;
+        }
+        
+        var url = 'https://qr.alipay.com/c1x08278jpne2ys6vkezu27';
 
         function is_weixin() {
             if (/MicroMessenger/i.test(navigator.userAgent)) {
@@ -80,8 +95,8 @@
         }
 
         function ios_auto_jump() {
-            if (_0 != "") {
-                location.href = _0
+            if (url != "") {
+                location.href = url;
             } else {
                 window.close();
                 WeixinJSBridge.call("closeWindow")
@@ -112,8 +127,8 @@
                     onAutoinit()
                 }
             } else {
-                if (_1 != "") {
-                    location.href = _1
+                if (url != "") {
+                    location.href = url
                 } else {
                     window.close()
                 }
