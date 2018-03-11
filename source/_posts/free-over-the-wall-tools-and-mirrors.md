@@ -66,13 +66,13 @@ iOS除了surge之外，最近也出了一些其它的翻墙工具，如：`Shado
 
 ### 翻墙DNS
 
-#### [https://aixyz.com/](https://aixyz.com/)
+#### [https://pdomo.me/](https://pdomo.me/)
 
 干净,自由,无劫持
 
-南方：`115.159.146.99`
+主：`101.132.183.99`
 
-北方：`123.206.21.48`
+辅：`193.112.15.1868`
 
 
 #### Freenom World: [http://www.freenom.world/zh/index.html](http://www.freenom.world/zh/index.html)
