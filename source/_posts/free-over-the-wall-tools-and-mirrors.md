@@ -84,6 +84,12 @@ Freenom World是快速且保护隐私的DNS服务器
 80.80.81.81
 ```
 
+#### [puredns](https://puredns.cn/)
+
+```
+123.207.137.88
+```
+
 ### google镜像
 
 - [http://www.gufenso.cn/](http://www.gufenso.cn/)

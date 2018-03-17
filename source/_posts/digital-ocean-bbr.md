@@ -8,6 +8,15 @@ categories: technology
 
 <!-- more -->
 
+## 2018-03-17
+
+最近发现有别人写好的一键安装脚本可以一键安装`bbr`，并且有`bbr魔改`，据说效果更好。
+
+一键安装脚本：[Linux-NetSpeed](https://github.com/chiakge/Linux-NetSpeed)
+
+关于速度的测试文章：[[小实验] 锐速&BBR究竟哪家强？个人PC有必要上锐速吗？](https://lolico.moe/gotagota/compare-serverspeeder-and-bbr.html)
+
+
 ## 更新内核
 
 先更新系统
