@@ -72,7 +72,7 @@ iOS除了surge之外，最近也出了一些其它的翻墙工具，如：`Shado
 
 主：`101.132.183.99`
 
-辅：`193.112.15.1868`
+辅：`193.112.15.186`
 
 
 #### Freenom World: [http://www.freenom.world/zh/index.html](http://www.freenom.world/zh/index.html)
