@@ -86,8 +86,8 @@ disqus_shortname:
 
 #Changyan
 changyan:
-  appid: # cytmKRLoU
-  appkey: # 8fd348b115c3935719a3ad0865b241c6
+  appid: cytmKRLoU
+  appkey: 8fd348b115c3935719a3ad0865b241c6
 
 #LiveRe
 livere_datauid: # MTAyMC8zNDY0NS8xMTE4Mg==
