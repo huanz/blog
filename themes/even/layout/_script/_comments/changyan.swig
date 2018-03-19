@@ -1,6 +1,5 @@
 {% if theme.changyan.appid and theme.changyan.appkey %}
 <!-- SOHUCS Comments -->
-<div id="SOHUCS"></div>
 <script type="text/javascript">
 (function(){
 var appid = '{{theme.changyan.appid}}';
