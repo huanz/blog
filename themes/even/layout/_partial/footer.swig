@@ -25,5 +25,6 @@
       <i class="iconfont icon-heart"></i>
     </span>
     <span class="author">{{ config.author }}</span>
+    <span>京ICP备18012917号</span>
   </span>
 </div>
