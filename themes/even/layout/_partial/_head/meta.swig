@@ -64,3 +64,5 @@
   <meta name="google-site-verification" content="{{ theme.google_verification }}" />
 {% endif %}
 
+<link rel="amphtml" href="https://mercury.postlight.com/amp?url={{config.url}}{{url_for(page.path)}}">
+
