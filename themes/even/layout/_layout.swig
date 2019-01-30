@@ -34,11 +34,5 @@
 
     {% include '_script/libs.swig' %}
     {% include '_script/theme.swig' %}
-
-    {# Analytics and push #}
-    {% if not env.debug %}
-        {% include "_script/analytics.swig" %}
-        {% include "_script/push.swig" %}
-    {% endif %}
   </body>
 </html>

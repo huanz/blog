@@ -4,12 +4,11 @@
 
 .posts {
   margin-bottom: $post-list-margin-bottom;
-  border-bottom: $post-border;
 }
 
 .post {
   padding: $post-padding;
-  
+
   & + .post {
     border-top: $post-border;
   }

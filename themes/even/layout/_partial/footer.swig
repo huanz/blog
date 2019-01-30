@@ -12,7 +12,7 @@
   </span>
   <span class="division">|</span>
   <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
-
+  
   <span class="copyright-year">
     {% set current = date(Date.now(), "YYYY") %}
     &copy; 

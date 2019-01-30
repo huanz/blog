@@ -26,12 +26,18 @@ menu:
 # ===========================================
 # Theme Settings
 # ===========================================
-# theme styling
-# color: Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
-theme:
-  color: Default
-  toc: true
-  fancybox: true
+# color: default | mint green | cobalt blue | hot pink | dark violet
+color: default
+
+# default page mode: default | archives
+mode: default
+
+toc: true
+
+# jQuery fancybox
+fancybox: true
+
+pjax: true
 
 copyright:
   enable: true
@@ -82,7 +88,7 @@ google_analytics: UA-49034721-1
 google_verification: 9c8gt3muwQc_44xCxDE2Op-g1Wn9C2vzhYP-rXVLqlU
 
 # Disqus
-disqus_shortname: 
+disqus_shortname: bukas
 
 #Changyan
 changyan:
@@ -103,4 +109,4 @@ valine:
 # ===========================================
 # Version
 # ===========================================
-version: 2.6.0
+version: 2.10.2

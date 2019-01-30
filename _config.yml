@@ -41,7 +41,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: false
+  line_number: true
   auto_detect: false
   tab_replace:
 
@@ -90,7 +90,7 @@ feed:
   limit: 20
 
 sitemap:
-    path: sitemap.xml
+  path: sitemap.xml
 
 # offline config passed to sw-precache.
 offline:
