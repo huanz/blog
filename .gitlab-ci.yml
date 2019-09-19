@@ -1,17 +1,17 @@
-image: node:4.2.2
+image: node:latest
 
 pages:
   cache:
     paths:
-    - node_modules/
+      - node_modules/
 
   script:
-  - npm i hexo-cli -g
-  - npm i
-  - hexo clean
-  - hexo g
+    - npm i hexo-cli -g
+    - npm i
+    - hexo clean
+    - hexo g
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master

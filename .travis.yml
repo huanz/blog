@@ -2,30 +2,30 @@
 # https://docs.travis-ci.com/user/encrypting-files/
 
 language: node_js
-node_js: '8'
+node_js: latest
 cache: yarn
 sudo: false
 branches:
   only:
-  - master
+    - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_ed639e6aae75_key -iv $encrypted_ed639e6aae75_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-- eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
-- cp .travis/ssh_config ~/.ssh/config
-- git config --global user.name 'huanz'
-- git config --global user.email 'yhz1219@gmail.com'
+  - openssl aes-256-cbc -K $encrypted_ed639e6aae75_key -iv $encrypted_ed639e6aae75_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
+  - eval $(ssh-agent)
+  - ssh-add ~/.ssh/id_rsa
+  - cp .travis/ssh_config ~/.ssh/config
+  - git config --global user.name 'huanz'
+  - git config --global user.email 'yhz1219@gmail.com'
 install:
-- npm install hexo-cli -g
-- npm install
+  - npm install hexo-cli -g
+  - npm install
 script:
-- hexo clean
-- hexo g
-- hexo d
+  - hexo clean
+  - hexo g
+  - hexo d
 after_success:
-- cp source/.gitlab-ci.yml .deploy_git
-- cd .deploy_git
-- git add .gitlab-ci.yml
-- git commit -m 'add build config'
-- git push git@gitlab.com:bukas/bukas.gitlab.io.git master
+  - cp source/.gitlab-ci.yml .deploy_git
+  - cd .deploy_git
+  - git add .gitlab-ci.yml
+  - git commit -m 'add build config'
+  - git push git@gitlab.com:bukas/bukas.gitlab.io.git master
