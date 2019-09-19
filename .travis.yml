@@ -2,7 +2,7 @@
 # https://docs.travis-ci.com/user/encrypting-files/
 
 language: node_js
-node_js: latest
+node_js: 12
 cache: yarn
 sudo: false
 branches:
