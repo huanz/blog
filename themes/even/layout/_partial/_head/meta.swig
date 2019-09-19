@@ -1,12 +1,12 @@
 <meta charset="UTF-8"/>
 <meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 <meta name="referrer" content="always">
 <meta name="author" content="{{ config.author }}">
 
-{# Disable transformation #}
+{#- Disable transformation -#}
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
@@ -37,30 +37,31 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/image/icon/96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/image/icon/16x16.png">
 
-{# Website description #}
-{% if page.description %}
+{#- Website description -#}
+{%- if page.description -%}
   <meta name="description" content="{{ page.description }}"/>
-{% elif page.title %}
+{%- elif page.title -%}
   <meta name="description" content="{{ page.title }}"/>
-{% elif config.description %}
+{%- elif config.description -%}
   <meta name="description" content="{{ config.description }}"/>
-{% endif %}
+{%- endif -%}
 
-{# Website keywords #}
-{% if page.keywords %}
+{#- Website keywords -#}
+{%- if page.keywords -%}
   <meta name="keywords" content="{{ page.keywords }}" />
-{% elif config.keywords %}
+{%- elif config.keywords -%}
   <meta name="keywords" content="{{ config.keywords }}" />
-{% elif page.tags and page.tags.length %}
-  <meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }}, {% endfor %}{{ config.title }}" />
-{% endif %}
+{%- elif page.tags and page.tags.length -%}
+  <meta name="keywords" content="{%- for tag in page.tags -%}{{ tag.name }}, {%- endfor -%}{{ config.title }}" />
+{%- endif -%}
 
-{% if theme.baidu_verification %}
+{%- if theme.baidu_verification -%}
   <meta name="baidu-site-verification" content="{{ theme.baidu_verification }}" />
-{% endif %}
+{%- endif -%}
 
-{% if theme.google_verification %}
+{%- if theme.google_verification -%}
   <meta name="google-site-verification" content="{{ theme.google_verification }}" />
-{% endif %}
+{%- endif -%}
+
 
 <link rel="amphtml" href="https://mercury.postlight.com/amp?url={{config.url}}{{url_for(page.path)}}">

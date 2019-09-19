@@ -39,6 +39,9 @@ fancybox: true
 
 pjax: true
 
+# LaTeX support (via MathJax)
+latex: false
+
 copyright:
   enable: true
   # https://creativecommons.org/
@@ -92,8 +95,8 @@ disqus_shortname: bukas
 
 #Changyan
 changyan:
-  appid: cytmKRLoU
-  appkey: 8fd348b115c3935719a3ad0865b241c6
+  appid: # cytmKRLoU
+  appkey: # 8fd348b115c3935719a3ad0865b241c6
 
 #LiveRe
 livere_datauid: # MTAyMC8zNDY0NS8xMTE4Mg==
@@ -109,4 +112,4 @@ valine:
 # ===========================================
 # Version
 # ===========================================
-version: 2.10.2
+version: 2.11.0

@@ -1,4 +1,5 @@
 # hexo-theme-even
+
 A super simple theme for Hexo
 
 [![GitHub stars](https://img.shields.io/github/stars/ahonn/hexo-theme-even.svg)](https://github.com/ahonn/hexo-theme-even/stargazers)
@@ -7,21 +8,27 @@ A super simple theme for Hexo
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ahonn/hexo-theme-even/master/LICENSE)
 
 ## Demo
-[在线预览 Demo](http://ahonn.github.io/)
+
+[在线预览 Demo](http://ahonn.github.io/hexo-theme-even)
 
 ## Feature
+
 - 自定义样式
 - 支持 Fancybox
 - 版权信息，自定义许可协议
 - 文章打赏，添加二维码
+- 支持 LaTeX（使用 MathJax）
 
 ## Screenshots
-![even-screenshots](http://ouv0frko5.bkt.clouddn.com/blog/6n2zu.png)
+
+![even-screenshots](https://ahonn-me.oss-cn-beijing.aliyuncs.com/images/55iw9.png)
 
 ## Installation
+
 ```bash
 $ npm install hexo-renderer-scss --save
 $ git clone https://github.com/ahonn/hexo-theme-even themes/even
+$ cp themes/even/_config.yml.example themes/even/_config.yml
 ```
 
 修改配置文件中的 `theme` 字段为 `even`:
